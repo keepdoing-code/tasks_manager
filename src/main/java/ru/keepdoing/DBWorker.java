@@ -28,76 +28,82 @@ public class DBWorker {
         }
     }
 
-    private ArrayList<String[]> exec(String query, QueryType queryType, Connection cn) {
-
+    private void exec(String query, Connection cn){
         try {
             Statement st = cn.createStatement();
             st.setQueryTimeout(30);
-            ResultSet rs;
-            switch (queryType){
-                case exec:
-                    st.execute(query);
-                    closeConnection(cn);
-                    break;
-
-                case execUpdate:
-                    st.executeUpdate(query);
-                    closeConnection(cn);
-                    break;
-
-                case execQuery:
-                    rs = st.executeQuery(query);
-                    return this.readMany(rs);
-
-                case execOne:
-                    rs = st.executeQuery(query);
-                    return null;
-            }
+            st.execute(query);
+            closeConnection(cn);
         } catch (SQLException e) {
             System.err.println(e.getMessage());
-        } finally {
-
         }
-        return null;
+    }
+
+    private void execUpdate(String query, Connection cn){
+        try {
+            Statement st = cn.createStatement();
+            st.setQueryTimeout(30);
+            st.executeUpdate(query);
+            closeConnection(cn);
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+        }
+    }
+
+    private Object execOne(String query, Connection cn){
+        try {
+            Statement st = cn.createStatement();
+            st.setQueryTimeout(30);
+            ResultSet rs = st.executeQuery(query);
+            final int count = rs.getMetaData().getColumnCount();
+            if (count > 1){
+                return "";
+            }
+            rs.first();
+            Object obj = rs.getObject(1);
+            closeConnection(cn);
+            return obj;
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+        }
+    }
+
+    private ArrayList<Object[]> execMany(String query, Connection cn){
+        try {
+            Statement st = cn.createStatement();
+            st.setQueryTimeout(30);
+            ResultSet rs = st.executeQuery(query);
+            final int columnCount = rs.getMetaData().getColumnCount();
+            ArrayList<Object[]> data = new ArrayList<>();
+
+            while (rs.next()) {
+                Object[] obj = new String[columnCount];
+                for (int i = 1; i <= columnCount; i++) {
+                    obj[i - 1] = rs.getObject(i);
+                }
+                data.add(obj);
+            }
+            closeConnection(cn);
+            return data;
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+        }
     }
 
     public void createTables(){
-        this.exec(Queries.createTablesQuery, QueryType.exec, this.connect());
+        this.exec(Queries.createTablesQuery, this.connect());
     }
 
     public void dropTables(){
-        this.exec(Queries.dropTablesQuery, QueryType.exec, this.connect());
+        this.exec(Queries.dropTablesQuery, this.connect());
     }
 
     public void addStatus(String status) {
-        exec(Queries.addStatus + "('" + status + "');", QueryType.execUpdate, this.connect());
+        exec(Queries.addStatus + "('" + status + "');", this.connect());
     }
 
     public void addType(String type) {
-        exec(Queries.addType + "('" + type + "');", QueryType.execUpdate, this.connect());
-    }
-
-    public ArrayList<String[]> readMany(ResultSet rs) throws SQLException{
-            final int columnCount = rs.getMetaData().getColumnCount();
-            ArrayList<String[]> data = new ArrayList<>();
-
-            while (rs.next()) {
-                String[] str = new String[columnCount];
-                for (int i = 1; i <= columnCount; i++) {
-                    str[i - 1] = rs.getString(i);
-                }
-                data.add(str);
-                return data;
-            }
-    }
-
-    public String readOne(ResultSet rs) throws SQLException{
-        final int count = rs.getMetaData().getColumnCount();
-        if (count > 1){
-            return "";
-        }
-        rs.first();
-        return rs.getString(1);
+        exec(Queries.addType + "('" + type + "');", this.connect());
     }
 
     public void showStatuses() {
@@ -118,10 +124,6 @@ public class DBWorker {
         addStatus("Open");
         addStatus("Close");
         showStatuses();
-    }
-
-    enum QueryType{
-        exec, execUpdate, execQuery, execOne
     }
 
 }
