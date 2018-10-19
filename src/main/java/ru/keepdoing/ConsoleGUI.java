@@ -7,7 +7,7 @@ public class ConsoleGUI {
 
     }
 
-    public static void printListObjects(ArrayList<Object[]> data){
+    public static void printData(ArrayList<Object[]> data) {
         for (Object[] arr : data) {
             for (Object obj : arr) {
                 System.out.printf(" %s |", String.valueOf(obj));
