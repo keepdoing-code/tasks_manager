@@ -5,41 +5,35 @@ import java.util.ArrayList;
 
 public class DBWorker {
 
-    private final String connectionString = "jdbc:sqlite:";
     private final String filename;
 
-    private Connection connect() {
-        Connection con = null;
-        try {
-            con = DriverManager.getConnection(connectionString + filename);
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
+    private Connection connect() throws SQLException{
+        Connection con;
+        String connectionString = "jdbc:sqlite:";
+        con = DriverManager.getConnection(connectionString + filename);
         return con;
     }
 
-    private void closeConnection(Connection cn) {
-        try {
+    private void closeConnection(Connection cn) throws SQLException{
             if (cn != null)
                 cn.close();
-        } catch (SQLException e) {
-            System.err.println(e);
-        }
     }
 
-    private void exec(String query, Connection cn) {
+    public void exec(String query) {
         try {
+            Connection cn = this.connect();
             Statement st = cn.createStatement();
             st.setQueryTimeout(30);
             st.execute(query);
-            closeConnection(cn);
+            this.closeConnection(cn);
         } catch (SQLException e) {
             System.err.println(e.getMessage());
         }
     }
 
-    private void execUpdate(String query, Connection cn) {
+    public void execUpdate(String query) {
         try {
+            Connection cn = this.connect();
             Statement st = cn.createStatement();
             st.setQueryTimeout(30);
             st.executeUpdate(query);
@@ -49,8 +43,9 @@ public class DBWorker {
         }
     }
 
-    private Object execOne(String query, Connection cn) {
+    public Object execOne(String query) {
         try {
+            Connection cn = this.connect();
             Statement st = cn.createStatement();
             st.setQueryTimeout(30);
             ResultSet rs = st.executeQuery(query);
@@ -68,8 +63,9 @@ public class DBWorker {
         return null;
     }
 
-    private ArrayList<Object[]> execMany(String query, Connection cn) {
+    public ArrayList<Object[]> execMany(String query) {
         try {
+            Connection cn = this.connect();
             Statement st = cn.createStatement();
             st.setQueryTimeout(30);
             ResultSet rs = st.executeQuery(query);
@@ -91,40 +87,8 @@ public class DBWorker {
         return null;
     }
 
-    public void createTables() {
-        this.exec(Queries.createTablesQuery, this.connect());
-    }
-
-    public void dropTables() {
-        this.exec(Queries.dropTablesQuery, this.connect());
-    }
-
-    public void addStatus(String status) {
-        exec(Queries.addStatus + "('" + status + "');", this.connect());
-    }
-
-    public void addType(String type) {
-        exec(Queries.addType + "('" + type + "');", this.connect());
-    }
-
-    public void showStatuses() {
-        ArrayList<Object[]> data = execMany(Queries.showStatuses, this.connect());
-        for (Object[] arr : data) {
-            for (Object obj : arr) {
-                System.out.printf(" %s |", String.valueOf(obj));
-            }
-            System.out.printf("\n");
-        }
-    }
-
     public DBWorker(String file) {
         this.filename = file;
-
-        dropTables();
-        createTables();
-        addStatus("Open");
-        addStatus("Close");
-        showStatuses();
     }
 
 }

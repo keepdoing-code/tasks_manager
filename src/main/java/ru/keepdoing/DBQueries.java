@@ -1,6 +1,8 @@
 package ru.keepdoing;
 
-public class Queries {
+import java.util.ArrayList;
+
+public class DBQueries {
     protected static final String setPragmaOn = "PRAGMA foreign_keys = ON;";
     protected static final String createTablesQuery =
             "CREATE TABLE if not exists status (id INTEGER PRIMARY KEY AUTOINCREMENT, sname text);" +
@@ -16,11 +18,38 @@ public class Queries {
                     "INSERT INTO type(tname) VALUES ('quick');" +
                     "INSERT INTO type(tname) VALUES ('important');" +
                     "INSERT INTO task(task, tid, sid, dfrom, dto) VALUES ('first task',1,1,1,1);";
-    protected static final String addStatus =
+    protected static final String addStatusQuery =
             "INSERT INTO status(sname) VALUES ";
-    protected static final String addType =
+    protected static final String addTypeQuery =
             "INSERT INTO status(tname) VALUES ";
-    protected static final String showStatuses =
+    protected static final String showStatusesQuery =
             "SELECT * FROM status;";
+    public final DBWorker db;
+
+
+    public DBQueries(String dbFilename){
+        this.db = new DBWorker(dbFilename);
+    }
+
+    public void createTables() {
+        db.exec(createTablesQuery);
+    }
+
+    public void dropTables() {
+        db.exec(dropTablesQuery);
+    }
+
+    public void addStatus(String status) {
+        db.execUpdate(addStatusQuery + "('" + status + "');");
+    }
+
+    public void addType(String type) {
+        db.execUpdate(addTypeQuery + "('" + type + "');");
+    }
+
+    public ArrayList<Object[]> getStatuses() {
+        ArrayList<Object[]> data = db.execMany(showStatusesQuery);
+        return data;
+    }
 
 }

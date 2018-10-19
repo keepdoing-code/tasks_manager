@@ -7,12 +7,12 @@ public class ConsoleGUI {
 
     }
 
-    public static void main(String[] args) {
-        ArrayList<String[]> arr = new ArrayList<>();
-        arr.add(new String[]{"a","b"});
-        String[] str = arr.get(0);
-        for (String s :str) {
-            System.out.println(s);
+    public static void printListObjects(ArrayList<Object[]> data){
+        for (Object[] arr : data) {
+            for (Object obj : arr) {
+                System.out.printf(" %s |", String.valueOf(obj));
+            }
+            System.out.printf("\n");
         }
     }
 }
