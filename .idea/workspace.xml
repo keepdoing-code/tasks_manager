@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="96fb9ed0-3326-4175-8aa5-0be5d17036c3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="96fb9ed0-3326-4175-8aa5-0be5d17036c3" name="Default Changelist" comment="Changes in exec method.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Helper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/keepdoing/ConsoleGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/ConsoleGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/keepdoing/DBWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/DBWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Queries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Queries.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tasks.db" beforeDir="false" afterPath="$PROJECT_DIR$/tasks.db" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -67,22 +65,26 @@
       <file leaf-file-name="DBWorker.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/DBWorker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="51" column="44" selection-start-line="51" selection-start-column="44" selection-end-line="51" selection-end-column="44" />
+            <state relative-caret-position="595">
+              <caret line="99" column="29" selection-start-line="99" selection-start-column="29" selection-end-line="99" selection-end-column="29" />
               <folding>
                 <element signature="method#connect#0;class#DBWorker#0" />
                 <element signature="method#closeConnection#0;class#DBWorker#0" />
-                <element signature="e#1099#1118#0" />
-                <element signature="e#1807#1808#0" expanded="true" />
-                <element signature="e#1891#1892#0" expanded="true" />
-                <element signature="e#1922#1923#0" expanded="true" />
-                <element signature="e#2004#2005#0" expanded="true" />
                 <element signature="method#addStatus#0;class#DBWorker#0" />
-                <element signature="method#addType#0;class#DBWorker#0" />
-                <element signature="e#2397#2398#0" expanded="true" />
-                <element signature="e#2474#2475#0" expanded="true" />
+                <element signature="method#readRows#0;class#DBWorker#0" />
+                <element signature="method#showStatuses#0;class#DBWorker#0" />
+                <element signature="method#DBWorker#0;class#DBWorker#0" />
                 <element signature="class#QueryType#0;class#DBWorker#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Helper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Helper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -124,6 +126,7 @@
         <option value="$PROJECT_DIR$/src/main/java/ru/keepdoing/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/keepdoing/Queries.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/keepdoing/ConsoleGUI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/keepdoing/Helper.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/keepdoing/DBWorker.java" />
       </list>
     </option>
@@ -212,7 +215,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ConsoleGUI">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="9" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -235,8 +238,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ConsoleGUI" />
         <item itemvalue="Application.App" />
+        <item itemvalue="Application.ConsoleGUI" />
       </list>
     </recent_temporary>
   </component>
@@ -258,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1539893897198</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Changes in exec method.">
+      <created>1539982978131</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1539982978131</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -273,14 +283,14 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24404761" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.24404761" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32973805" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.17841409" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4985119" visible="true" weight="0.17841409" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32973805" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Structure" order="1" sideWeight="0.5014881" side_tool="true" visible="true" weight="0.17841409" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
@@ -346,7 +356,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Default Changelist" />
-    <option name="LAST_COMMIT_MESSAGE" value="Default Changelist" />
+    <MESSAGE value="Changes in exec method." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes in exec method." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -368,15 +379,10 @@
           <folding>
             <element signature="method#connect#0;class#DBWorker#0" />
             <element signature="method#closeConnection#0;class#DBWorker#0" />
-            <element signature="e#1099#1118#0" />
-            <element signature="e#1807#1808#0" expanded="true" />
-            <element signature="e#1891#1892#0" expanded="true" />
-            <element signature="e#1922#1923#0" expanded="true" />
-            <element signature="e#2004#2005#0" expanded="true" />
             <element signature="method#addStatus#0;class#DBWorker#0" />
-            <element signature="method#addType#0;class#DBWorker#0" />
-            <element signature="e#2397#2398#0" expanded="true" />
-            <element signature="e#2474#2475#0" expanded="true" />
+            <element signature="method#readRows#0;class#DBWorker#0" />
+            <element signature="method#showStatuses#0;class#DBWorker#0" />
+            <element signature="method#DBWorker#0;class#DBWorker#0" />
             <element signature="class#QueryType#0;class#DBWorker#0" />
           </folding>
         </state>
@@ -417,15 +423,10 @@
           <folding>
             <element signature="method#connect#0;class#DBWorker#0" />
             <element signature="method#closeConnection#0;class#DBWorker#0" />
-            <element signature="e#1099#1118#0" />
-            <element signature="e#1807#1808#0" expanded="true" />
-            <element signature="e#1891#1892#0" expanded="true" />
-            <element signature="e#1922#1923#0" expanded="true" />
-            <element signature="e#2004#2005#0" expanded="true" />
             <element signature="method#addStatus#0;class#DBWorker#0" />
-            <element signature="method#addType#0;class#DBWorker#0" />
-            <element signature="e#2397#2398#0" expanded="true" />
-            <element signature="e#2474#2475#0" expanded="true" />
+            <element signature="method#readRows#0;class#DBWorker#0" />
+            <element signature="method#showStatuses#0;class#DBWorker#0" />
+            <element signature="method#DBWorker#0;class#DBWorker#0" />
             <element signature="class#QueryType#0;class#DBWorker#0" />
           </folding>
         </state>
@@ -445,13 +446,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/ConsoleGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Queries.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -459,22 +453,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/ConsoleGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Helper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/DBWorker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="51" column="44" selection-start-line="51" selection-start-column="44" selection-end-line="51" selection-end-column="44" />
+        <state relative-caret-position="595">
+          <caret line="99" column="29" selection-start-line="99" selection-start-column="29" selection-end-line="99" selection-end-column="29" />
           <folding>
             <element signature="method#connect#0;class#DBWorker#0" />
             <element signature="method#closeConnection#0;class#DBWorker#0" />
-            <element signature="e#1099#1118#0" />
-            <element signature="e#1807#1808#0" expanded="true" />
-            <element signature="e#1891#1892#0" expanded="true" />
-            <element signature="e#1922#1923#0" expanded="true" />
-            <element signature="e#2004#2005#0" expanded="true" />
             <element signature="method#addStatus#0;class#DBWorker#0" />
-            <element signature="method#addType#0;class#DBWorker#0" />
-            <element signature="e#2397#2398#0" expanded="true" />
-            <element signature="e#2474#2475#0" expanded="true" />
+            <element signature="method#readRows#0;class#DBWorker#0" />
+            <element signature="method#showStatuses#0;class#DBWorker#0" />
+            <element signature="method#DBWorker#0;class#DBWorker#0" />
             <element signature="class#QueryType#0;class#DBWorker#0" />
           </folding>
         </state>

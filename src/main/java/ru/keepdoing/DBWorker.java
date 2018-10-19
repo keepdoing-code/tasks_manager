@@ -2,7 +2,6 @@ package ru.keepdoing;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.List;
 
 public class DBWorker {
 
@@ -29,44 +28,35 @@ public class DBWorker {
         }
     }
 
-    private ResultSet exec(String query, QueryType queryType, Connection cn) {
+    private ArrayList<String[]> exec(String query, QueryType queryType, Connection cn) {
 
         try {
             Statement st = cn.createStatement();
             st.setQueryTimeout(30);
+            ResultSet rs;
             switch (queryType){
                 case exec:
                     st.execute(query);
                     closeConnection(cn);
                     break;
+
                 case execUpdate:
                     st.executeUpdate(query);
                     closeConnection(cn);
                     break;
-                case execQuery:
-                    ResultSet rs = st.executeQuery(query);
-                    final int columnCount = rs.getMetaData().getColumnCount();
-                    for (int i = 1; i <= columnCount; i++) {
-                        System.out.printf(" %s |", rs.getMetaData().getColumnLabel(i));
-                    }
-                    System.out.printf("\n");
 
-                    while (rs.next()) {
-                        for(int i = 1; i <= columnCount; i++){
-                            System.out.printf(" %s |", rs.getString(i));
-                        }
-                        System.out.printf("\n");
-                    }
+                case execQuery:
+                    rs = st.executeQuery(query);
+                    return this.readMany(rs);
+
+                case execOne:
+                    rs = st.executeQuery(query);
+                    return null;
             }
         } catch (SQLException e) {
             System.err.println(e.getMessage());
         } finally {
-//            try {
-//                if (cn != null)
-//                    cn.close();
-//            } catch (SQLException e) {
-//                System.err.println(e);
-//            }
+
         }
         return null;
     }
@@ -87,13 +77,37 @@ public class DBWorker {
         exec(Queries.addType + "('" + type + "');", QueryType.execUpdate, this.connect());
     }
 
-    public List<String> readData(String table){
+    public ArrayList<String[]> readMany(ResultSet rs) throws SQLException{
+            final int columnCount = rs.getMetaData().getColumnCount();
+            ArrayList<String[]> data = new ArrayList<>();
 
-        return null;
+            while (rs.next()) {
+                String[] str = new String[columnCount];
+                for (int i = 1; i <= columnCount; i++) {
+                    str[i - 1] = rs.getString(i);
+                }
+                data.add(str);
+                return data;
+            }
+    }
+
+    public String readOne(ResultSet rs) throws SQLException{
+        final int count = rs.getMetaData().getColumnCount();
+        if (count > 1){
+            return "";
+        }
+        rs.first();
+        return rs.getString(1);
     }
 
     public void showStatuses() {
-        exec(Queries.showStatuses,QueryType.execQuery,this.connect());
+        ArrayList<String[]> data = exec(Queries.showStatuses,QueryType.execQuery,this.connect());
+        for (String[] arr : data) {
+            for (String s : arr){
+                System.out.printf(" %s |", s);
+            }
+            System.out.printf("\n");
+        }
     }
 
     public DBWorker(String file) {
@@ -107,7 +121,7 @@ public class DBWorker {
     }
 
     enum QueryType{
-        exec, execUpdate, execQuery
+        exec, execUpdate, execQuery, execOne
     }
 
 }
