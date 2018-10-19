@@ -7,7 +7,6 @@ public class DBWorker {
 
     private final String connectionString = "jdbc:sqlite:";
     private final String filename;
-//    private Connection connection = null;
 
     private Connection connect() {
         Connection con = null;
@@ -19,7 +18,7 @@ public class DBWorker {
         return con;
     }
 
-    private void closeConnection(Connection cn){
+    private void closeConnection(Connection cn) {
         try {
             if (cn != null)
                 cn.close();
@@ -28,7 +27,7 @@ public class DBWorker {
         }
     }
 
-    private void exec(String query, Connection cn){
+    private void exec(String query, Connection cn) {
         try {
             Statement st = cn.createStatement();
             st.setQueryTimeout(30);
@@ -39,7 +38,7 @@ public class DBWorker {
         }
     }
 
-    private void execUpdate(String query, Connection cn){
+    private void execUpdate(String query, Connection cn) {
         try {
             Statement st = cn.createStatement();
             st.setQueryTimeout(30);
@@ -50,13 +49,13 @@ public class DBWorker {
         }
     }
 
-    private Object execOne(String query, Connection cn){
+    private Object execOne(String query, Connection cn) {
         try {
             Statement st = cn.createStatement();
             st.setQueryTimeout(30);
             ResultSet rs = st.executeQuery(query);
             final int count = rs.getMetaData().getColumnCount();
-            if (count > 1){
+            if (count > 1) {
                 return "";
             }
             rs.first();
@@ -66,9 +65,10 @@ public class DBWorker {
         } catch (SQLException e) {
             System.err.println(e.getMessage());
         }
+        return null;
     }
 
-    private ArrayList<Object[]> execMany(String query, Connection cn){
+    private ArrayList<Object[]> execMany(String query, Connection cn) {
         try {
             Statement st = cn.createStatement();
             st.setQueryTimeout(30);
@@ -77,7 +77,7 @@ public class DBWorker {
             ArrayList<Object[]> data = new ArrayList<>();
 
             while (rs.next()) {
-                Object[] obj = new String[columnCount];
+                Object[] obj = new Object[columnCount];
                 for (int i = 1; i <= columnCount; i++) {
                     obj[i - 1] = rs.getObject(i);
                 }
@@ -88,13 +88,14 @@ public class DBWorker {
         } catch (SQLException e) {
             System.err.println(e.getMessage());
         }
+        return null;
     }
 
-    public void createTables(){
+    public void createTables() {
         this.exec(Queries.createTablesQuery, this.connect());
     }
 
-    public void dropTables(){
+    public void dropTables() {
         this.exec(Queries.dropTablesQuery, this.connect());
     }
 
@@ -107,10 +108,10 @@ public class DBWorker {
     }
 
     public void showStatuses() {
-        ArrayList<String[]> data = exec(Queries.showStatuses,QueryType.execQuery,this.connect());
-        for (String[] arr : data) {
-            for (String s : arr){
-                System.out.printf(" %s |", s);
+        ArrayList<Object[]> data = execMany(Queries.showStatuses, this.connect());
+        for (Object[] arr : data) {
+            for (Object obj : arr) {
+                System.out.printf(" %s |", String.valueOf(obj));
             }
             System.out.printf("\n");
         }

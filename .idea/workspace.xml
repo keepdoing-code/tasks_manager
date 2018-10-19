@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="96fb9ed0-3326-4175-8aa5-0be5d17036c3" name="Default Changelist" comment="Changes in exec method.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Helper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="96fb9ed0-3326-4175-8aa5-0be5d17036c3" name="Default Changelist" comment="Split queries into four types:&#10;    exec&#10;    execUpdate&#10;    execOne&#10;    execMany">
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/keepdoing/DBWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/DBWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks.db" beforeDir="false" afterPath="$PROJECT_DIR$/tasks.db" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,16 +62,18 @@
       <file leaf-file-name="DBWorker.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/DBWorker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="99" column="29" selection-start-line="99" selection-start-column="29" selection-end-line="99" selection-end-column="29" />
+            <state relative-caret-position="290">
+              <caret line="67" column="4" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
               <folding>
                 <element signature="method#connect#0;class#DBWorker#0" />
                 <element signature="method#closeConnection#0;class#DBWorker#0" />
-                <element signature="method#addStatus#0;class#DBWorker#0" />
-                <element signature="method#readRows#0;class#DBWorker#0" />
-                <element signature="method#showStatuses#0;class#DBWorker#0" />
+                <element signature="method#execSql#0;class#DBWorker#0" />
+                <element signature="method#execUpdate#0;class#DBWorker#0" />
+                <element signature="e#2684#2685#0" expanded="true" />
+                <element signature="e#2752#2753#0" expanded="true" />
+                <element signature="e#2784#2785#0" expanded="true" />
+                <element signature="e#2850#2851#0" expanded="true" />
                 <element signature="method#DBWorker#0;class#DBWorker#0" />
-                <element signature="class#QueryType#0;class#DBWorker#0" />
               </folding>
             </state>
           </provider>
@@ -268,7 +267,21 @@
       <option name="project" value="LOCAL" />
       <updated>1539982978131</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Changes in exec method.">
+      <created>1539988334886</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1539988334886</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Split queries into four types:&#10;    exec&#10;    execUpdate&#10;    execOne&#10;    execMany">
+      <created>1539989816826</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1539989816827</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -277,7 +290,7 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32886904" />
+      <window_info active="true" anchor="bottom" id="Messages" order="7" visible="true" weight="0.32886904" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
@@ -288,9 +301,9 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4985119" visible="true" weight="0.17841409" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49889135" visible="true" weight="0.17841409" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32973805" />
-      <window_info id="Structure" order="1" sideWeight="0.5014881" side_tool="true" visible="true" weight="0.17841409" />
+      <window_info id="Structure" order="1" sideWeight="0.50110865" side_tool="true" visible="true" weight="0.17841409" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
@@ -357,11 +370,12 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Default Changelist" />
     <MESSAGE value="Changes in exec method." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes in exec method." />
+    <MESSAGE value="Split queries into four types:&#10;    exec&#10;    execUpdate&#10;    execOne&#10;    execMany" />
+    <option name="LAST_COMMIT_MESSAGE" value="Split queries into four types:&#10;    exec&#10;    execUpdate&#10;    execOne&#10;    execMany" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -379,11 +393,13 @@
           <folding>
             <element signature="method#connect#0;class#DBWorker#0" />
             <element signature="method#closeConnection#0;class#DBWorker#0" />
-            <element signature="method#addStatus#0;class#DBWorker#0" />
-            <element signature="method#readRows#0;class#DBWorker#0" />
-            <element signature="method#showStatuses#0;class#DBWorker#0" />
+            <element signature="method#execSql#0;class#DBWorker#0" />
+            <element signature="method#execUpdate#0;class#DBWorker#0" />
+            <element signature="e#2684#2685#0" expanded="true" />
+            <element signature="e#2752#2753#0" expanded="true" />
+            <element signature="e#2784#2785#0" expanded="true" />
+            <element signature="e#2850#2851#0" expanded="true" />
             <element signature="method#DBWorker#0;class#DBWorker#0" />
-            <element signature="class#QueryType#0;class#DBWorker#0" />
           </folding>
         </state>
       </provider>
@@ -423,11 +439,13 @@
           <folding>
             <element signature="method#connect#0;class#DBWorker#0" />
             <element signature="method#closeConnection#0;class#DBWorker#0" />
-            <element signature="method#addStatus#0;class#DBWorker#0" />
-            <element signature="method#readRows#0;class#DBWorker#0" />
-            <element signature="method#showStatuses#0;class#DBWorker#0" />
+            <element signature="method#execSql#0;class#DBWorker#0" />
+            <element signature="method#execUpdate#0;class#DBWorker#0" />
+            <element signature="e#2684#2685#0" expanded="true" />
+            <element signature="e#2752#2753#0" expanded="true" />
+            <element signature="e#2784#2785#0" expanded="true" />
+            <element signature="e#2850#2851#0" expanded="true" />
             <element signature="method#DBWorker#0;class#DBWorker#0" />
-            <element signature="class#QueryType#0;class#DBWorker#0" />
           </folding>
         </state>
       </provider>
@@ -469,16 +487,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/DBWorker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="99" column="29" selection-start-line="99" selection-start-column="29" selection-end-line="99" selection-end-column="29" />
+        <state relative-caret-position="290">
+          <caret line="67" column="4" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
           <folding>
             <element signature="method#connect#0;class#DBWorker#0" />
             <element signature="method#closeConnection#0;class#DBWorker#0" />
-            <element signature="method#addStatus#0;class#DBWorker#0" />
-            <element signature="method#readRows#0;class#DBWorker#0" />
-            <element signature="method#showStatuses#0;class#DBWorker#0" />
+            <element signature="method#execSql#0;class#DBWorker#0" />
+            <element signature="method#execUpdate#0;class#DBWorker#0" />
+            <element signature="e#2684#2685#0" expanded="true" />
+            <element signature="e#2752#2753#0" expanded="true" />
+            <element signature="e#2784#2785#0" expanded="true" />
+            <element signature="e#2850#2851#0" expanded="true" />
             <element signature="method#DBWorker#0;class#DBWorker#0" />
-            <element signature="class#QueryType#0;class#DBWorker#0" />
           </folding>
         </state>
       </provider>
