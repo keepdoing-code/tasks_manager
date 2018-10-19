@@ -18,6 +18,8 @@ public class Queries {
                     "INSERT INTO task(task, tid, sid, dfrom, dto) VALUES ('first task',1,1,1,1);";
     protected static final String addStatus =
             "INSERT INTO status(sname) VALUES ";
+    protected static final String addType =
+            "INSERT INTO status(tname) VALUES ";
     protected static final String showStatuses =
             "SELECT * FROM status;";
 
