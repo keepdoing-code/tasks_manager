@@ -12,16 +12,10 @@ public class DBQueries {
             "DROP TABLE if exists status;" +
                     "DROP TABLE if exists type;" +
                     "DROP TABLE if exists task;";
-    protected static final String insertDataQuery =
-            "INSERT INTO status(sname) VALUES ('opened');" +
-                    "INSERT INTO status(sname) VALUES ('closed');" +
-                    "INSERT INTO type(tname) VALUES ('quick');" +
-                    "INSERT INTO type(tname) VALUES ('important');" +
-                    "INSERT INTO task(task, tid, sid, dfrom, dto) VALUES ('first task',1,1,1,1);";
     protected static final String addStatusQuery =
             "INSERT INTO status(sname) VALUES ";
     protected static final String addTypeQuery =
-            "INSERT INTO status(tname) VALUES ";
+            "INSERT INTO type(tname) VALUES ";
     protected static final String showStatusesQuery =
             "SELECT * FROM status;";
     public final DBWorker db;
