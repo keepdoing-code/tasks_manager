@@ -7,19 +7,11 @@ public class DBWorker {
 
     private final String filename;
 
-    private Connection connect() throws SQLException{
-        Connection con;
-        String connectionString = "jdbc:sqlite:";
-        con = DriverManager.getConnection(connectionString + filename);
-        return con;
+    DBWorker(String file) {
+        this.filename = file;
     }
 
-    private void closeConnection(Connection cn) throws SQLException{
-            if (cn != null)
-                cn.close();
-    }
-
-    public void exec(String query) {
+    void exec(String query) {
         try {
             Connection cn = this.connect();
             Statement st = cn.createStatement();
@@ -31,7 +23,7 @@ public class DBWorker {
         }
     }
 
-    public void execUpdate(String query) {
+    void execUpdate(String query) {
         try {
             Connection cn = this.connect();
             Statement st = cn.createStatement();
@@ -43,7 +35,7 @@ public class DBWorker {
         }
     }
 
-    public Object execOne(String query) {
+    Object execOne(String query) {
         try {
             Connection cn = this.connect();
             Statement st = cn.createStatement();
@@ -63,7 +55,7 @@ public class DBWorker {
         return null;
     }
 
-    public ArrayList<Object[]> execMany(String query) {
+    ArrayList<Object[]> execMany(String query) {
         try {
             Connection cn = this.connect();
             Statement st = cn.createStatement();
@@ -87,8 +79,16 @@ public class DBWorker {
         return null;
     }
 
-    public DBWorker(String file) {
-        this.filename = file;
+    private Connection connect() throws SQLException {
+        Connection con;
+        String connectionString = "jdbc:sqlite:";
+        con = DriverManager.getConnection(connectionString + filename);
+        return con;
+    }
+
+    private void closeConnection(Connection cn) throws SQLException {
+        if (cn != null)
+            cn.close();
     }
 
 }

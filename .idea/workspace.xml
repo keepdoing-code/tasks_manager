@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="96fb9ed0-3326-4175-8aa5-0be5d17036c3" name="Default Changelist" comment="Splited all db work onto classes DBWorker and DBQueries. &#10;Console show method in class ConsoleGUI. &#10;Main class &quot;App&quot;, that tests minimal functionality.">
+    <list default="true" id="96fb9ed0-3326-4175-8aa5-0be5d17036c3" name="Default Changelist" comment="corrected some trifles">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/keepdoing/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/keepdoing/ConsoleGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/ConsoleGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/keepdoing/DBQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/DBQueries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/keepdoing/DBWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/DBWorker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/keepdoing/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/keepdoing/App.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tasks.db" beforeDir="false" />
     </list>
@@ -58,8 +59,12 @@
       <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+            <state relative-caret-position="60">
+              <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+              <folding>
+                <element signature="e#92#93#0" expanded="true" />
+                <element signature="e#124#125#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -67,8 +72,8 @@
       <file leaf-file-name="ConsoleGUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/ConsoleGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+            <state relative-caret-position="315">
+              <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
               <folding>
                 <element signature="method#printData#0;class#ConsoleGUI#0" />
               </folding>
@@ -79,11 +84,12 @@
       <file leaf-file-name="DBQueries.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/DBQueries.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="45" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="45" />
+            <state relative-caret-position="322">
+              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
               <folding>
-                <element signature="method#getStatuses#0;class#Queries#0" />
+                <element signature="method#addTask#0;class#DBQueries#0" />
                 <element signature="method#getTypes#0;class#DBQueries#0" />
+                <element signature="method#getTasks#0;class#DBQueries#0" />
               </folding>
             </state>
           </provider>
@@ -92,17 +98,14 @@
       <file leaf-file-name="DBWorker.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/DBWorker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="90" column="29" selection-start-line="90" selection-start-column="29" selection-end-line="90" selection-end-column="29" />
+            <state relative-caret-position="390">
+              <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
               <folding>
-                <element signature="method#connect#0;class#DBWorker#0" />
-                <element signature="method#closeConnection#0;class#DBWorker#0" />
-                <element signature="method#execSql#0;class#DBWorker#0" />
                 <element signature="method#execUpdate#0;class#DBWorker#0" />
                 <element signature="method#execOne#0;class#DBWorker#0" />
                 <element signature="method#execMany#0;class#DBWorker#0" />
-                <element signature="e#2661#2662#0" expanded="true" />
-                <element signature="e#2697#2698#0" expanded="true" />
+                <element signature="method#connect#0;class#DBWorker#0" />
+                <element signature="method#closeConnection#0;class#DBWorker#0" />
               </folding>
             </state>
           </provider>
@@ -125,10 +128,10 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ru/keepdoing/Helper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/keepdoing/DBWorker.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/keepdoing/Queries.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/keepdoing/ConsoleGUI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/keepdoing/DBWorker.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/keepdoing/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/keepdoing/ConsoleGUI.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/keepdoing/DBQueries.java" />
       </list>
     </option>
@@ -141,10 +144,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="50" />
-    <option name="y" value="-13" />
-    <option name="width" value="1932" />
-    <option name="height" value="1066" />
+    <option name="x" value="49" />
+    <option name="y" value="22" />
+    <option name="width" value="1929" />
+    <option name="height" value="746" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -204,6 +207,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -305,7 +309,14 @@
       <option name="project" value="LOCAL" />
       <updated>1539992112855</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="corrected some trifles">
+      <created>1539993274508</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1539993274508</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -314,52 +325,31 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32886904" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4985119" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32973805" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4985119" visible="true" weight="0.17841409" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32973805" />
-      <window_info id="Structure" order="1" sideWeight="0.5014881" side_tool="true" visible="true" weight="0.17841409" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32973805" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info id="Image Layers" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5016648" side_tool="true" weight="0.32987553" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24404761" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49833518" weight="0.32987553" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.498452" weight="0.18534961" />
       <window_info id="Structure" order="1" sideWeight="0.501548" side_tool="true" weight="0.18312986" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49833518" weight="0.32987553" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24481328" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="5" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32973805" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info id="Learn" order="6" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32973805" />
-      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5016648" side_tool="true" weight="0.32987553" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info id="Learn" order="6" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32973805" />
     </layout>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -397,7 +387,8 @@
     <MESSAGE value="Split queries into four types:&#10;    exec&#10;    execUpdate&#10;    execOne&#10;    execMany" />
     <MESSAGE value="Split queries into four types:&#10;    exec&#10;    execUpdate&#10;    execOne&#10;    execMany&#10;    &#10;It working! ))" />
     <MESSAGE value="Splited all db work onto classes DBWorker and DBQueries. &#10;Console show method in class ConsoleGUI. &#10;Main class &quot;App&quot;, that tests minimal functionality." />
-    <option name="LAST_COMMIT_MESSAGE" value="Splited all db work onto classes DBWorker and DBQueries. &#10;Console show method in class ConsoleGUI. &#10;Main class &quot;App&quot;, that tests minimal functionality." />
+    <MESSAGE value="corrected some trifles" />
+    <option name="LAST_COMMIT_MESSAGE" value="corrected some trifles" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -408,8 +399,59 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/App.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+          <folding>
+            <element signature="e#92#93#0" expanded="true" />
+            <element signature="e#124#125#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/ConsoleGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="67" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
+          <folding>
+            <element signature="method#printData#0;class#ConsoleGUI#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/DBWorker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
+          <folding>
+            <element signature="method#execUpdate#0;class#DBWorker#0" />
+            <element signature="method#execOne#0;class#DBWorker#0" />
+            <element signature="method#execMany#0;class#DBWorker#0" />
+            <element signature="method#connect#0;class#DBWorker#0" />
+            <element signature="method#closeConnection#0;class#DBWorker#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/DBQueries.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="method#addTask#0;class#DBQueries#0" />
+            <element signature="method#getTypes#0;class#DBQueries#0" />
+            <element signature="method#getTasks#0;class#DBQueries#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/App.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="e#92#93#0" expanded="true" />
+            <element signature="e#124#125#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -418,14 +460,11 @@
         <state relative-caret-position="735">
           <caret line="50" column="13" lean-forward="true" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
           <folding>
-            <element signature="method#connect#0;class#DBWorker#0" />
-            <element signature="method#closeConnection#0;class#DBWorker#0" />
-            <element signature="method#execSql#0;class#DBWorker#0" />
             <element signature="method#execUpdate#0;class#DBWorker#0" />
             <element signature="method#execOne#0;class#DBWorker#0" />
             <element signature="method#execMany#0;class#DBWorker#0" />
-            <element signature="e#2661#2662#0" expanded="true" />
-            <element signature="e#2697#2698#0" expanded="true" />
+            <element signature="method#connect#0;class#DBWorker#0" />
+            <element signature="method#closeConnection#0;class#DBWorker#0" />
           </folding>
         </state>
       </provider>
@@ -441,6 +480,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="e#92#93#0" expanded="true" />
+            <element signature="e#124#125#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -449,8 +492,9 @@
         <state relative-caret-position="180">
           <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
           <folding>
-            <element signature="method#getStatuses#0;class#Queries#0" />
+            <element signature="method#addTask#0;class#DBQueries#0" />
             <element signature="method#getTypes#0;class#DBQueries#0" />
+            <element signature="method#getTasks#0;class#DBQueries#0" />
           </folding>
         </state>
       </provider>
@@ -470,14 +514,11 @@
         <state relative-caret-position="238">
           <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
           <folding>
-            <element signature="method#connect#0;class#DBWorker#0" />
-            <element signature="method#closeConnection#0;class#DBWorker#0" />
-            <element signature="method#execSql#0;class#DBWorker#0" />
             <element signature="method#execUpdate#0;class#DBWorker#0" />
             <element signature="method#execOne#0;class#DBWorker#0" />
             <element signature="method#execMany#0;class#DBWorker#0" />
-            <element signature="e#2661#2662#0" expanded="true" />
-            <element signature="e#2697#2698#0" expanded="true" />
+            <element signature="method#connect#0;class#DBWorker#0" />
+            <element signature="method#closeConnection#0;class#DBWorker#0" />
           </folding>
         </state>
       </provider>
@@ -489,54 +530,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Helper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Helper.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+        <state relative-caret-position="60">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+          <folding>
+            <element signature="e#92#93#0" expanded="true" />
+            <element signature="e#124#125#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/DBWorker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="90" column="29" selection-start-line="90" selection-start-column="29" selection-end-line="90" selection-end-column="29" />
+        <state relative-caret-position="390">
+          <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
           <folding>
-            <element signature="method#connect#0;class#DBWorker#0" />
-            <element signature="method#closeConnection#0;class#DBWorker#0" />
-            <element signature="method#execSql#0;class#DBWorker#0" />
             <element signature="method#execUpdate#0;class#DBWorker#0" />
             <element signature="method#execOne#0;class#DBWorker#0" />
             <element signature="method#execMany#0;class#DBWorker#0" />
-            <element signature="e#2661#2662#0" expanded="true" />
-            <element signature="e#2697#2698#0" expanded="true" />
+            <element signature="method#connect#0;class#DBWorker#0" />
+            <element signature="method#closeConnection#0;class#DBWorker#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/ConsoleGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+        <state relative-caret-position="315">
+          <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
           <folding>
             <element signature="method#printData#0;class#ConsoleGUI#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/DBQueries.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="45" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="45" />
+        <state relative-caret-position="322">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
           <folding>
-            <element signature="method#getStatuses#0;class#Queries#0" />
+            <element signature="method#addTask#0;class#DBQueries#0" />
             <element signature="method#getTypes#0;class#DBQueries#0" />
+            <element signature="method#getTasks#0;class#DBQueries#0" />
           </folding>
         </state>
       </provider>
