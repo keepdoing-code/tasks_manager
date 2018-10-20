@@ -12,7 +12,7 @@ public class ConsoleGUI {
     }
 
     public void mainCycleV2() {
-        System.out.printf(Menu.DEV_EXEC_MENU);
+        print(Menu.DEV_EXEC_MENU);
         Scanner conInput = new Scanner(System.in);
 
         try {
@@ -22,19 +22,43 @@ public class ConsoleGUI {
             ArrayList<Object[]> data = Menu.execMenu.exec(choice, queries);
             if (data != null) printData(data);
         } catch (NumberFormatException e) {
-            System.out.printf(WRONG_INPUT);
+            print(WRONG_INPUT);
         }
         mainCycleV2();
     }
 
+
+    public static void print(String str) {
+        System.out.printf(str);
+    }
+
+    public static void printData(ArrayList<Object[]> data, String title) {
+
+        if (title.length() > 0) System.out.println(" < " + title + " > ");
+
+        for (Object[] arr : data) {
+            for (Object obj : arr) {
+                System.out.printf(" %s\t|", String.valueOf(obj));
+            }
+            System.out.printf("\n");
+        }
+        System.out.print("\n");
+    }
+
+    public static void printData(ArrayList<Object[]> data) {
+        printData(data, "");
+    }
+
+
+    //TODO  Remove this method
     public void mainCycle() {
-        System.out.printf(Menu.DEV_MENU);
+        print(Menu.DEV_MENU);
         Scanner in = new Scanner(System.in);
         String str = in.next();
 
         try {
             int choice = Integer.parseInt(str);
-            DBQueries queries = new DBQueries("tasks.dbWorker");
+            DBQueries queries = new DBQueries("tasks.db");
             queries.settingUp();
             switch (choice) {
                 case 1:
@@ -70,23 +94,7 @@ public class ConsoleGUI {
         mainCycle();
     }
 
-    public static void printData(ArrayList<Object[]> data, String title) {
-
-        if (title.length() > 0) System.out.println(" < " + title + " > ");
-
-        for (Object[] arr : data) {
-            for (Object obj : arr) {
-                System.out.printf(" %s\t|", String.valueOf(obj));
-            }
-            System.out.printf("\n");
-        }
-        System.out.print("\n");
-    }
-
-    public static void printData(ArrayList<Object[]> data) {
-        printData(data, "");
-    }
-
+    //TODO  Remove this method
     public static void testQueries() {
         DBQueries queries = new DBQueries("tasks.dbWorker");
         queries.settingUp();

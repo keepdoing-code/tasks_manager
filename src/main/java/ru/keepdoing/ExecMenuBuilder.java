@@ -34,10 +34,12 @@ public class ExecMenuBuilder {
         String query = item.getQuery();
         QueryType queryType = item.getType();
 
+        //TODO  "Exit" also is a type of menu item in future refactoring
         if ("Exit".equals(query) || queryType == QueryType.none) {
             System.exit(0);
         }
 
+        // TODO  To unify functionality we can wrap query and dbWorker into dbQueries for send to separate methods
         switch (queryType) {
             case exec:
                 dbWorker.exec(query);
@@ -46,7 +48,7 @@ public class ExecMenuBuilder {
                 dbWorker.execUpdate(query);
                 break;
             case one:
-                dbWorker.execOne(query);
+                //dbWorker.execOne(query);
                 break;
             case many:
                 return dbWorker.execMany(query);
