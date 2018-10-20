@@ -4,48 +4,37 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ConsoleGUI {
-
-    private static final String MAIN_MENU = new Menu()
-            .addLine("Select what your want to do?")
-            .addTab("1. Show Tasks")
-            .addTab("2. Tasks manager")
-            .addTab("3. Types and Statuses")
-            .addTab("4. Exit")
-            .add("> ")
-            .get();
-
-    private static final String DEV_MENU = new Menu()
-            .fillPattern("-", 20)
-            .addLine("Develop menu")
-            .addTab("1. Create data base and tables structure")
-            .addTab("2. Drop all tables in data base")
-            .addTab("3. Fill tables by demo data")
-            .addTab("4. Show tasks")
-            .addTab("5. Exit")
-            .add("> ")
-            .get();
-
-    private static final String SHOW_TASKS_MENU = new Menu()
-            .addLine("Tasks menu")
-            .addTab("1. Show all")
-            .addTab("2. Filter by type")
-            .addTab("3. Filter by status")
-            .get();
-
     private static final String WRONG_INPUT = "\n\nWrong input. Enter item number again: \n";
 
+
     public ConsoleGUI(){
-        mainCycle();
+        mainCycleV2();
+    }
+
+    public void mainCycleV2() {
+        System.out.printf(Menu.DEV_EXEC_MENU);
+        Scanner conInput = new Scanner(System.in);
+
+        try {
+            int choice = Integer.parseInt(conInput.next());
+            DBQueries queries = new DBQueries("tasks.dbWorker");
+            queries.settingUp();
+            ArrayList<Object[]> data = Menu.execMenu.exec(choice, queries);
+            printData(data);
+        } catch (NumberFormatException e) {
+            System.out.printf(WRONG_INPUT);
+        }
+        mainCycleV2();
     }
 
     public void mainCycle() {
-        System.out.printf(DEV_MENU);
+        System.out.printf(Menu.DEV_MENU);
         Scanner in = new Scanner(System.in);
         String str = in.next();
 
         try {
             int choice = Integer.parseInt(str);
-            DBQueries queries = new DBQueries("tasks.db");
+            DBQueries queries = new DBQueries("tasks.dbWorker");
             queries.settingUp();
             switch (choice) {
                 case 1:
@@ -83,11 +72,11 @@ public class ConsoleGUI {
 
     public static void printData(ArrayList<Object[]> data, String title) {
 
-        System.out.println("> " + title);
+        System.out.println(" < " + title + " > ");
 
         for (Object[] arr : data) {
             for (Object obj : arr) {
-                System.out.printf(" %s |", String.valueOf(obj));
+                System.out.printf(" %s\t|", String.valueOf(obj));
             }
             System.out.printf("\n");
         }
@@ -99,7 +88,7 @@ public class ConsoleGUI {
     }
 
     public static void testQueries() {
-        DBQueries queries = new DBQueries("tasks.db");
+        DBQueries queries = new DBQueries("tasks.dbWorker");
         queries.settingUp();
         queries.dropTables();
         queries.createTables();

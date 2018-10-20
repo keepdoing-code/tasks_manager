@@ -26,41 +26,51 @@ public class DBQueries {
                     "FOREIGN KEY(sid) REFERENCES statuses(id) ON DELETE CASCADE" +
                     ");";
 
-    public final DBWorker db;
+    private final DBWorker dbWorker;
+    private final String dbFilename;
 
 
     public DBQueries(String dbFilename){
-        this.db = new DBWorker(dbFilename);
+        this.dbFilename = dbFilename;
+        this.dbWorker = new DBWorker(dbFilename);
+    }
+
+    public String getFilename() {
+        return dbFilename;
+    }
+
+    public DBWorker getDbWorker() {
+        return dbWorker;
     }
 
     public void settingUp() {
-        db.exec(PRAGMA_FOREIGN_KEYS_ON);
+        dbWorker.exec(PRAGMA_FOREIGN_KEYS_ON);
     }
 
     public void createTables() {
-        db.execUpdate(CREATE_TABLES_QUERY);
+        dbWorker.execUpdate(CREATE_TABLES_QUERY);
     }
 
     public void dropTables() {
-        db.execUpdate(DROP_TABLES_QUERY);
+        dbWorker.execUpdate(DROP_TABLES_QUERY);
     }
 
     public void addStatus(String status) {
-        db.execUpdate(ADD_STATUS_QUERY + "('" + status + "');");
+        dbWorker.execUpdate(ADD_STATUS_QUERY + "('" + status + "');");
     }
 
     public void addType(String type) {
-        db.execUpdate(ADD_TYPE_QUERY + "('" + type + "');");
+        dbWorker.execUpdate(ADD_TYPE_QUERY + "('" + type + "');");
     }
 
     public void addTask(String task, int typeId, int statusId, int dateFrom, int dateTo) {
         final String query = ADD_TASK_QUERY + "('" +
                 task + "'," + typeId + "," + statusId + "," + dateFrom + "," + dateTo + ");";
-        db.execUpdate(query);
+        dbWorker.execUpdate(query);
     }
 
     public ArrayList<Object[]> getData(String query) {
-        ArrayList<Object[]> data = db.execMany(query);
+        ArrayList<Object[]> data = dbWorker.execMany(query);
         return data;
     }
 
