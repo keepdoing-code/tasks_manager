@@ -25,7 +25,7 @@ public class MenuBuilder {
         return this;
     }
 
-    public String get() {
+    public String getString() {
         return result;
     }
 

@@ -17,10 +17,10 @@ public class ConsoleGUI {
 
         try {
             int choice = Integer.parseInt(conInput.next());
-            DBQueries queries = new DBQueries("tasks.dbWorker");
+            DBQueries queries = new DBQueries("tasks.db");
             queries.settingUp();
             ArrayList<Object[]> data = Menu.execMenu.exec(choice, queries);
-            printData(data);
+            if (data != null) printData(data);
         } catch (NumberFormatException e) {
             System.out.printf(WRONG_INPUT);
         }
@@ -72,7 +72,7 @@ public class ConsoleGUI {
 
     public static void printData(ArrayList<Object[]> data, String title) {
 
-        System.out.println(" < " + title + " > ");
+        if (title.length() > 0) System.out.println(" < " + title + " > ");
 
         for (Object[] arr : data) {
             for (Object obj : arr) {

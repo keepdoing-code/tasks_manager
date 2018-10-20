@@ -1,12 +1,11 @@
 package ru.keepdoing;
 
-;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class ExecMenuBuilder {
 
-    private String screenMenu;
+    private String screenMenu = "";
     private final String menuName;
     private HashMap<Integer, MenuItem> menuExec = new HashMap<>();
 
@@ -55,7 +54,7 @@ public class ExecMenuBuilder {
         return null;
     }
 
-    public String get() {
+    public String getString() {
         return screenMenu;
     }
 
