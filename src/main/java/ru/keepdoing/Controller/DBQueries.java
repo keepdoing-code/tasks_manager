@@ -1,18 +1,21 @@
-package ru.keepdoing;
+package ru.keepdoing.Controller;
 
 import java.util.ArrayList;
 
+
+//TODO rename 'dfrom' to 'created' and 'dto' to 'deadline'
+//TODO add types: important immediate, not important immediate, important not immediate, not important not immediate
 public class DBQueries {
-    protected static final String PRAGMA_FOREIGN_KEYS_ON = "PRAGMA foreign_keys = ON;";
-    protected static final String DROP_TABLES_QUERY = "DROP TABLE if exists statuses; DROP TABLE if exists types; DROP TABLE if exists tasks;";
-    protected static final String ADD_STATUS_QUERY = "INSERT INTO statuses(sname) VALUES ";
-    protected static final String ADD_TYPE_QUERY = "INSERT INTO types(tname) VALUES ";
-    protected static final String ADD_TASK_QUERY = "INSERT INTO tasks(task, tid, sid, dfrom, dto) VALUES ";
-    protected static final String GET_STATUSES_QUERY = "SELECT * FROM statuses;";
-    protected static final String GET_TYPES_QUERY = "SELECT * FROM types;";
-    protected static final String GET_TASKS_QUERY = "SELECT * FROM tasks;";
-    protected static final String TASKS_VIEW = "SELECT tasks.task, statuses.sname, types.tname FROM tasks, statuses, types WHERE (tasks.tid = types.id and tasks.sid = statuses.id);";
-    protected static final String CREATE_TABLES_QUERY =
+    public static final String PRAGMA_FOREIGN_KEYS_ON = "PRAGMA foreign_keys = ON;";
+    public static final String DROP_TABLES_QUERY = "DROP TABLE if exists statuses; DROP TABLE if exists types; DROP TABLE if exists tasks;";
+    public static final String ADD_STATUS_QUERY = "INSERT INTO statuses(sname) VALUES ";
+    public static final String ADD_TYPE_QUERY = "INSERT INTO types(tname) VALUES ";
+    public static final String ADD_TASK_QUERY = "INSERT INTO tasks(task, tid, sid, dfrom, dto) VALUES ";
+    public static final String GET_STATUSES_QUERY = "SELECT * FROM statuses;";
+    public static final String GET_TYPES_QUERY = "SELECT * FROM types;";
+    public static final String GET_TASKS_QUERY = "SELECT * FROM tasks;";
+    public static final String TASKS_VIEW = "SELECT tasks.task, statuses.sname, types.tname FROM tasks, statuses, types WHERE (tasks.tid = types.id and tasks.sid = statuses.id);";
+    public static final String CREATE_TABLES_QUERY =
             "CREATE TABLE if not exists statuses (id INTEGER PRIMARY KEY AUTOINCREMENT, sname text);" +
                     "CREATE TABLE if not exists types (id INTEGER PRIMARY KEY AUTOINCREMENT, tname text);" +
                     "CREATE TABLE if not exists tasks (" +

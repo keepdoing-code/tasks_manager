@@ -1,21 +1,24 @@
-package ru.keepdoing;
+package ru.keepdoing.Menu;
+
+import ru.keepdoing.Controller.DBQueries;
+import ru.keepdoing.Controller.DBWorker;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class ExecMenuBuilder {
+public class SimpleExecMenuBuilder {
 
     private String screenMenu = "";
     private final String menuName;
-    private HashMap<Integer, MenuItem> menuExec = new HashMap<>();
+    private HashMap<Integer, ExecMenuItem> menuExec = new HashMap<>();
 
 
-    public ExecMenuBuilder(String menuName) {
+    public SimpleExecMenuBuilder(String menuName) {
         this.menuName = menuName;
         screenMenu += menuName + "\n";
     }
 
-    public ExecMenuBuilder add(Integer itemId, MenuItem item) {
+    public SimpleExecMenuBuilder add(Integer itemId, ExecMenuItem item) {
         menuExec.put(itemId, item);
 
         //TODO use stringBuilder for this:
@@ -30,7 +33,7 @@ public class ExecMenuBuilder {
     public ArrayList<Object[]> exec(Integer itemId, DBQueries dbQueries) {
         DBWorker dbWorker = dbQueries.getDbWorker();
 
-        MenuItem item = menuExec.get(itemId);
+        ExecMenuItem item = menuExec.get(itemId);
         String query = item.getQuery();
         QueryType queryType = item.getType();
 
@@ -48,7 +51,8 @@ public class ExecMenuBuilder {
                 dbWorker.execUpdate(query);
                 break;
             case one:
-                //dbWorker.execOne(query);
+//                Object[] objects = new Object[1];
+//                objects[0] = dbWorker.execOne(query);
                 break;
             case many:
                 return dbWorker.execMany(query);
@@ -59,30 +63,4 @@ public class ExecMenuBuilder {
     public String getString() {
         return screenMenu;
     }
-
-}
-
-class MenuItem {
-    private final String name;
-    private final String query;
-    private final QueryType queryType;
-
-    public MenuItem(final String name, final String query, QueryType qt) {
-        this.name = name;
-        this.query = query;
-        this.queryType = qt;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getQuery() {
-        return query;
-    }
-
-    public QueryType getType() {
-        return queryType;
-    }
-
 }

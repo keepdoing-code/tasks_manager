@@ -1,4 +1,4 @@
-package ru.keepdoing;
+package ru.keepdoing.Controller;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -11,7 +11,7 @@ public class DBWorker {
         this.filename = file;
     }
 
-    void exec(String query) {
+    public void exec(String query) {
         try {
             Connection cn = this.connect();
             Statement st = cn.createStatement();
@@ -23,7 +23,7 @@ public class DBWorker {
         }
     }
 
-    void execUpdate(String query) {
+    public void execUpdate(String query) {
         try {
             Connection cn = this.connect();
             Statement st = cn.createStatement();
@@ -35,7 +35,7 @@ public class DBWorker {
         }
     }
 
-    Object execOne(String query) {
+    public Object execOne(String query) {
         try {
             Connection cn = this.connect();
             Statement st = cn.createStatement();
@@ -55,7 +55,7 @@ public class DBWorker {
         return null;
     }
 
-    ArrayList<Object[]> execMany(String query) {
+    public ArrayList<Object[]> execMany(String query) {
         try {
             Connection cn = this.connect();
             Statement st = cn.createStatement();

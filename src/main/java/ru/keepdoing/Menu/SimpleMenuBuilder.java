@@ -1,10 +1,10 @@
-package ru.keepdoing;
+package ru.keepdoing.Menu;
 
-public class MenuBuilder {
+public class SimpleMenuBuilder {
 
     private String result = "";
 
-    public MenuBuilder fillPattern(String s, int count) {
+    public SimpleMenuBuilder fillPattern(String s, int count) {
         for (int i = 0; i < count; i++) {
             result += s;
         }
@@ -12,15 +12,15 @@ public class MenuBuilder {
         return this;
     }
 
-    public MenuBuilder addLine(String str) {
+    public SimpleMenuBuilder addLine(String str) {
         return add(str + "\n");
     }
 
-    public MenuBuilder addTab(String str) {
+    public SimpleMenuBuilder addTab(String str) {
         return add("\t" + str + "\n");
     }
 
-    public MenuBuilder add(String str) {
+    public SimpleMenuBuilder add(String str) {
         result += str;
         return this;
     }
