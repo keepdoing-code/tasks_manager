@@ -1,9 +1,9 @@
 package ru.keepdoing;
 
 import ru.keepdoing.Controller.DBQueries;
+import ru.keepdoing.Menu.AbstractMenuItem;
 import ru.keepdoing.Menu.MainMenu;
 import ru.keepdoing.Menu.Menu;
-import ru.keepdoing.Menu.MenuItems;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -12,8 +12,23 @@ public class ConsoleGUI {
     private static final String WRONG_INPUT = "\n\nWrong input. Enter item number again: \n";
 
     public ConsoleGUI(){
-        MainMenu mainMenu = new MainMenu();
-        mainMenu.run(0);
+        MainMenu mainMenu = new MainMenu("Main menu");
+        mainMenu.add(1, new AbstractMenuItem("First item") {
+            @Override
+            public void run() {
+                System.out.println(this.getName());
+            }
+        });
+
+        mainMenu.add(2, new AbstractMenuItem("Second item") {
+            @Override
+            public void run() {
+                System.out.println("This second");
+            }
+        });
+
+        mainMenu.getText();
+
     }
 
     public void mainCycle() {

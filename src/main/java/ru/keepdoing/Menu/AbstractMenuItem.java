@@ -3,13 +3,13 @@ package ru.keepdoing.Menu;
 public abstract class AbstractMenuItem {
     private String name;
 
-    abstract void run();
+    public abstract void run();
 
-    String getName() {
+    public String getName() {
         return this.name;
     }
 
-    AbstractMenuItem(String name) {
+    public AbstractMenuItem(String name) {
         this.name = name;
     }
 }
