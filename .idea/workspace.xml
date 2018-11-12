@@ -1,23 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="96fb9ed0-3326-4175-8aa5-0be5d17036c3" name="Default Changelist" comment="Minimal working version of universal menu.&#10;Bigger TODO list.&#10;Many small corrections.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/AbstractMenuItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/ExecMenuItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/IMenuItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/MainMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/MenuItems.java" afterDir="false" />
+    <list default="true" id="96fb9ed0-3326-4175-8aa5-0be5d17036c3" name="Default Changelist" comment="Upcoming menu version.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/keepdoing/ConsoleGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/ConsoleGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/keepdoing/DBQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Controller/DBQueries.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/keepdoing/DBWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Controller/DBWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/keepdoing/ExecMenuBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/SimpleExecMenuBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/keepdoing/MenuBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/SimpleMenuBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/keepdoing/QueryType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/QueryType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/keepdoing/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/keepdoing/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ru/keepdoing/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ru/keepdoing/AppTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/MainMenu.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,11 +55,39 @@
       <file leaf-file-name="ConsoleGUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/ConsoleGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+            <state relative-caret-position="-354">
+              <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
               <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#631#632#0" expanded="true" />
+                <element signature="e#697#698#0" expanded="true" />
+                <element signature="e#826#827#0" expanded="true" />
+                <element signature="e#891#892#0" expanded="true" />
                 <element signature="e#469#1396#0" />
-                <element signature="e#1581#1607#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ru/keepdoing/AppTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="213">
+              <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainMenu.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/MainMenu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+              <folding>
+                <element signature="e#229#230#0" expanded="true" />
+                <element signature="e#269#270#0" expanded="true" />
+                <element signature="e#484#485#0" expanded="true" />
+                <element signature="e#527#528#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,25 +97,11 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/AbstractMenuItem.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+              <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
               <folding>
-                <element signature="e#141#142#0" expanded="true" />
-                <element signature="e#168#169#0" expanded="true" />
-                <element signature="e#123#124#0" expanded="true" />
-                <element signature="e#155#156#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainMenu.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/MainMenu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-              <folding>
-                <element signature="e#278#279#0" expanded="true" />
-                <element signature="e#335#336#0" expanded="true" />
+                <element signature="e#174#175#0" expanded="true" />
+                <element signature="e#211#212#0" expanded="true" />
+                <element signature="e#243#244#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -119,6 +120,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -443,7 +449,21 @@
       <option name="project" value="LOCAL" />
       <updated>1540077660544</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Another main menu concept. Minimal working version.&#10;Some refactoring.">
+      <created>1541841015824</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1541841015824</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Upcoming menu version.">
+      <created>1542055722048</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1542055722048</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -465,6 +485,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="22" width="1362" height="746" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49924242" weight="0.32973805" />
@@ -474,7 +495,7 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5022727" side_tool="true" weight="0.40986133" />
       <window_info anchor="right" id="Maven Projects" order="7" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="9" sideWeight="0.49772727" visible="true" weight="0.32973805" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49772727" weight="0.32973805" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49772727" weight="0.40986133" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49924242" weight="0.32973805" />
       <window_info id="Capture Tool" order="4" />
@@ -536,7 +557,9 @@
     <MESSAGE value="In progress interactive menu." />
     <MESSAGE value="Minimal working version of universal menu.&#10;Big TODO list." />
     <MESSAGE value="Minimal working version of universal menu.&#10;Bigger TODO list.&#10;Many small corrections." />
-    <option name="LAST_COMMIT_MESSAGE" value="Minimal working version of universal menu.&#10;Bigger TODO list.&#10;Many small corrections." />
+    <MESSAGE value="Another main menu concept. Minimal working version.&#10;Some refactoring." />
+    <MESSAGE value="Upcoming menu version." />
+    <option name="LAST_COMMIT_MESSAGE" value="Upcoming menu version." />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -564,8 +587,12 @@
         <state relative-caret-position="255">
           <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
           <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#631#632#0" expanded="true" />
+            <element signature="e#697#698#0" expanded="true" />
+            <element signature="e#826#827#0" expanded="true" />
+            <element signature="e#891#892#0" expanded="true" />
             <element signature="e#469#1396#0" />
-            <element signature="e#1581#1607#0" />
           </folding>
         </state>
       </provider>
@@ -635,8 +662,12 @@
         <state relative-caret-position="660">
           <caret line="51" selection-start-line="51" selection-end-line="51" />
           <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#631#632#0" expanded="true" />
+            <element signature="e#697#698#0" expanded="true" />
+            <element signature="e#826#827#0" expanded="true" />
+            <element signature="e#891#892#0" expanded="true" />
             <element signature="e#469#1396#0" />
-            <element signature="e#1581#1607#0" />
           </folding>
         </state>
       </provider>
@@ -713,8 +744,12 @@
         <state relative-caret-position="660">
           <caret line="51" selection-start-line="51" selection-end-line="51" />
           <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#631#632#0" expanded="true" />
+            <element signature="e#697#698#0" expanded="true" />
+            <element signature="e#826#827#0" expanded="true" />
+            <element signature="e#891#892#0" expanded="true" />
             <element signature="e#469#1396#0" />
-            <element signature="e#1581#1607#0" />
           </folding>
         </state>
       </provider>
@@ -791,8 +826,12 @@
         <state relative-caret-position="405">
           <caret line="27" column="67" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
           <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#631#632#0" expanded="true" />
+            <element signature="e#697#698#0" expanded="true" />
+            <element signature="e#826#827#0" expanded="true" />
+            <element signature="e#891#892#0" expanded="true" />
             <element signature="e#469#1396#0" />
-            <element signature="e#1581#1607#0" />
           </folding>
         </state>
       </provider>
@@ -881,8 +920,12 @@
         <state relative-caret-position="60">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
           <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#631#632#0" expanded="true" />
+            <element signature="e#697#698#0" expanded="true" />
+            <element signature="e#826#827#0" expanded="true" />
+            <element signature="e#891#892#0" expanded="true" />
             <element signature="e#469#1396#0" />
-            <element signature="e#1581#1607#0" />
           </folding>
         </state>
       </provider>
@@ -958,13 +1001,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ru/keepdoing/AppTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/IMenuItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1012,34 +1048,46 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/AbstractMenuItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
           <folding>
-            <element signature="e#141#142#0" expanded="true" />
-            <element signature="e#168#169#0" expanded="true" />
-            <element signature="e#123#124#0" expanded="true" />
-            <element signature="e#155#156#0" expanded="true" />
+            <element signature="e#174#175#0" expanded="true" />
+            <element signature="e#211#212#0" expanded="true" />
+            <element signature="e#243#244#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/MainMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+        <state relative-caret-position="225">
+          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
           <folding>
-            <element signature="e#278#279#0" expanded="true" />
-            <element signature="e#335#336#0" expanded="true" />
+            <element signature="e#229#230#0" expanded="true" />
+            <element signature="e#269#270#0" expanded="true" />
+            <element signature="e#484#485#0" expanded="true" />
+            <element signature="e#527#528#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/keepdoing/AppTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/ConsoleGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        <state relative-caret-position="-354">
+          <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
           <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#631#632#0" expanded="true" />
+            <element signature="e#697#698#0" expanded="true" />
+            <element signature="e#826#827#0" expanded="true" />
+            <element signature="e#891#892#0" expanded="true" />
             <element signature="e#469#1396#0" />
-            <element signature="e#1581#1607#0" />
           </folding>
         </state>
       </provider>

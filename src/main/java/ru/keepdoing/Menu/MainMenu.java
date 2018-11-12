@@ -1,6 +1,5 @@
 package ru.keepdoing.Menu;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class MainMenu {
@@ -14,6 +13,7 @@ public class MainMenu {
 
     public void run(int menuNum) {
         //TODO check error when wrong number entered
+        //TODO may be use user exception
         items.get(menuNum).run();
     }
 
@@ -22,12 +22,18 @@ public class MainMenu {
     }
 
     public String getText() {
-        System.out.println(this.menuName);
+        StringBuilder sb = new StringBuilder(this.menuName);
+        sb.append('\n');
+
         for (Integer i : items.keySet()) {
-            System.out.printf("%d  ", i);
-            System.out.println(items.get(i).getName());
+            sb
+                    .append('\t')
+                    .append(i)
+                    .append(":\t")
+                    .append(items.get(i).getName())
+                    .append('\n');
         }
-        return null;
+        return sb.toString();
     }
 
 }
