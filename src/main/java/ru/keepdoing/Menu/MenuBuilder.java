@@ -22,6 +22,9 @@ public class MenuBuilder {
         items.put(itemNumber, item);
     }
 
+
+    //TODO create method that compile string after all items was added
+    //TODO as this is Builder class, method "add" must return "MenuBuilder"
     public String getText() {
         StringBuilder sb = new StringBuilder(this.menuName);
         sb.append('\n');
