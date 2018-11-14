@@ -1,15 +1,22 @@
 package ru.keepdoing.Menu;
 
+import ru.keepdoing.Controller.DBQueries;
 import ru.keepdoing.TasksExceptions.WrongMenuItemException;
 
 public class Menu {
 
     private MenuBuilder currentMenu;
+    //TODO refactor menu to List of menus and manage them in this class
     private final MenuBuilder main = new MenuBuilder("Main menu");
     private final MenuBuilder subMenu = new MenuBuilder("Sub menu 1");
+    private DBQueries dbQueries;
 
-    public Menu() {
+    public Menu(DBQueries dbQueries) {
+        this.dbQueries = dbQueries;
+
         fillMenuItems();
+        main.BuildMenuText();
+        subMenu.BuildMenuText();
         currentMenu = main;
     }
 
@@ -18,7 +25,7 @@ public class Menu {
     }
 
     public String getMenuText() {
-        return currentMenu.getText();
+        return currentMenu.getMenuText();
     }
 
 

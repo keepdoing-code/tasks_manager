@@ -22,7 +22,7 @@ public class App {
             Log.s("DB created. Tables created");
         }
 
-        Menu menu = new Menu();
+        Menu menu = new Menu(dbQueries);
         ConsoleGUI consoleGUI = new ConsoleGUI(menu);
         consoleGUI.askMenuItem();
     }

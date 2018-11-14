@@ -9,6 +9,8 @@ public class MenuBuilder {
 
     private final String menuName;
 
+    private String MenuText;
+
     public MenuBuilder(String menuName) {
         this.menuName = menuName;
     }
@@ -18,14 +20,12 @@ public class MenuBuilder {
         items.get(menuItem).run();
     }
 
-    public void add(int itemNumber, AbstractMenuItem item) {
+    public MenuBuilder add(int itemNumber, AbstractMenuItem item) {
         items.put(itemNumber, item);
+        return this;
     }
 
-
-    //TODO create method that compile string after all items was added
-    //TODO as this is Builder class, method "add" must return "MenuBuilder"
-    public String getText() {
+    public MenuBuilder BuildMenuText() {
         StringBuilder sb = new StringBuilder(this.menuName);
         sb.append('\n');
         for (Integer i : items.keySet()) {
@@ -36,7 +36,12 @@ public class MenuBuilder {
                     .append(items.get(i).getName())
                     .append('\n');
         }
-        return sb.toString();
+        MenuText = sb.toString();
+        return this;
+    }
+
+    public String getMenuText() {
+        return MenuText;
     }
 
 }

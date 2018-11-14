@@ -1,24 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="96fb9ed0-3326-4175-8aa5-0be5d17036c3" name="Default Changelist" comment="Upcoming menu version. Minimal working version.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/TasksExceptions/WrongMenuItemException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/View/Log.java" afterDir="false" />
+    <list default="true" id="96fb9ed0-3326-4175-8aa5-0be5d17036c3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/keepdoing/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/keepdoing/ConsoleGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/View/ConsoleGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Controller/DBQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Controller/DBQueries.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/ExecMenuItem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/IMenuItem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/MenuBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/MenuItems.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/QueryType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/SimpleExecMenuBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/SimpleMenuBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/keepdoing/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/keepdoing/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ru/keepdoing/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ru/keepdoing/AppTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/MenuBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/MenuBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/keepdoing/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/keepdoing/App.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,22 +59,24 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="628" />
+          <entry key="java" value="1059" />
+          <entry key="txt" value="186" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="628" />
+          <entry key="JAVA" value="1059" />
+          <entry key="PLAIN_TEXT" value="186" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="1" />
+          <entry key="java" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="1" />
+          <entry key="JAVA" value="2" />
         </counts>
       </usages-collector>
     </session>
@@ -96,8 +86,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+            <state relative-caret-position="330">
+              <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -105,15 +95,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/View/ConsoleGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
+            <state relative-caret-position="480">
+              <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#460#461#0" expanded="true" />
-                <element signature="e#491#492#0" expanded="true" />
+                <element signature="e#427#428#0" expanded="true" />
+                <element signature="e#459#460#0" expanded="true" />
                 <element signature="e#1280#1281#0" expanded="true" />
                 <element signature="e#1315#1316#0" expanded="true" />
                 <element signature="e#1359#1360#0" expanded="true" />
@@ -123,14 +113,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="30" column="59" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
+            <state relative-caret-position="120">
+              <caret line="8" column="71" selection-start-line="8" selection-start-column="71" selection-end-line="8" selection-end-column="71" />
               <folding>
-                <element signature="e#615#616#0" expanded="true" />
-                <element signature="e#641#642#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#496#497#0" expanded="true" />
+                <element signature="e#540#541#0" expanded="true" />
                 <element signature="e#841#842#0" expanded="true" />
                 <element signature="e#915#916#0" expanded="true" />
                 <element signature="e#756#757#0" expanded="true" />
@@ -147,10 +138,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/MenuBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+            <state relative-caret-position="359">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1315#1316#0" expanded="true" />
+                <element signature="e#1346#1347#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -214,11 +207,12 @@
         <option value="$PROJECT_DIR$/src/main/java/ru/keepdoing/Log.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/keepdoing/ConsoleGUI.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/MainMenu.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/MenuBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/keepdoing/Controller/DBQueries.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/keepdoing/View/ConsoleGUI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/MenuBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/keepdoing/Actions.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/keepdoing/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/Menu.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/keepdoing/View/ConsoleGUI.java" />
       </list>
     </option>
   </component>
@@ -335,7 +329,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542228448199" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542229094711" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -542,7 +536,21 @@
       <option name="project" value="LOCAL" />
       <updated>1542057806432</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Minimal working version.&#10;More refactoring. I'm looking for how to organize my code, classes and realize MVC in other project, and study how to do it.">
+      <created>1542228646452</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1542228646452</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Refactoring in MenuBuilder">
+      <created>1542228870625</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1542228870625</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -566,7 +574,7 @@
     <frame x="4" y="22" width="1362" height="746" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.498452" visible="true" weight="0.19166666" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.498452" visible="true" weight="0.19166666" />
       <window_info id="Structure" order="1" sideWeight="0.501548" side_tool="true" weight="0.18312986" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -639,7 +647,9 @@
     <MESSAGE value="Another main menu concept. Minimal working version.&#10;Some refactoring." />
     <MESSAGE value="Upcoming menu version." />
     <MESSAGE value="Upcoming menu version. Minimal working version." />
-    <option name="LAST_COMMIT_MESSAGE" value="Upcoming menu version. Minimal working version." />
+    <MESSAGE value="Minimal working version.&#10;More refactoring. I'm looking for how to organize my code, classes and realize MVC in other project, and study how to do it." />
+    <MESSAGE value="Refactoring in MenuBuilder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring in MenuBuilder" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
@@ -655,6 +665,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="62">
           <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+          <folding>
+            <element signature="e#169#170#0" expanded="true" />
+            <element signature="e#205#206#0" expanded="true" />
+            <element signature="method#exec#0;class#DBWorker#0" />
+            <element signature="method#execUpdate#0;class#DBWorker#0" />
+            <element signature="method#closeConnection#0;class#DBWorker#0" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -705,20 +722,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/App.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/MenuBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+        <state relative-caret-position="359">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1315#1316#0" expanded="true" />
+            <element signature="e#1346#1347#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Actions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/MenuBuilder.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/View/ConsoleGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        <state relative-caret-position="480">
+          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#427#428#0" expanded="true" />
+            <element signature="e#459#460#0" expanded="true" />
+            <element signature="e#1280#1281#0" expanded="true" />
+            <element signature="e#1315#1316#0" expanded="true" />
+            <element signature="e#1359#1360#0" expanded="true" />
+            <element signature="e#1397#1398#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -727,11 +772,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/Menu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="30" column="59" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
+        <state relative-caret-position="120">
+          <caret line="8" column="71" selection-start-line="8" selection-start-column="71" selection-end-line="8" selection-end-column="71" />
           <folding>
-            <element signature="e#615#616#0" expanded="true" />
-            <element signature="e#641#642#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#496#497#0" expanded="true" />
+            <element signature="e#540#541#0" expanded="true" />
             <element signature="e#841#842#0" expanded="true" />
             <element signature="e#915#916#0" expanded="true" />
             <element signature="e#756#757#0" expanded="true" />
@@ -740,22 +786,6 @@
             <element signature="e#1172#1173#0" expanded="true" />
             <element signature="e#1322#1323#0" expanded="true" />
             <element signature="e#1371#1372#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/View/ConsoleGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#460#461#0" expanded="true" />
-            <element signature="e#491#492#0" expanded="true" />
-            <element signature="e#1280#1281#0" expanded="true" />
-            <element signature="e#1315#1316#0" expanded="true" />
-            <element signature="e#1359#1360#0" expanded="true" />
-            <element signature="e#1397#1398#0" expanded="true" />
           </folding>
         </state>
       </provider>
