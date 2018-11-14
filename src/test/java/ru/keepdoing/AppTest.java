@@ -4,6 +4,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 import ru.keepdoing.Controller.DBQueries;
+import ru.keepdoing.View.ConsoleGUI;
 
 /**
  * Unit test for simple App.
@@ -21,7 +22,7 @@ public class AppTest
 
     @Test
     public void testQueries() {
-        DBQueries queries = new DBQueries("tasks.dbWorker");
+        DBQueries queries = new DBQueries("test_tasks.db");
         queries.settingUp();
         queries.dropTables();
         queries.createTables();
@@ -43,4 +44,6 @@ public class AppTest
 
         ConsoleGUI.printData(queries.getData(DBQueries.TASKS_VIEW), "Tasks view");
     }
+
+
 }

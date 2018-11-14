@@ -1,20 +1,21 @@
 package ru.keepdoing.Menu;
 
+import ru.keepdoing.TasksExceptions.WrongMenuItemException;
 import java.util.HashMap;
 
-public class MainMenu {
+public class MenuBuilder {
+
     private HashMap<Integer, AbstractMenuItem> items = new HashMap<>();
 
     private final String menuName;
 
-    public MainMenu(String menuName) {
+    public MenuBuilder(String menuName) {
         this.menuName = menuName;
     }
 
-    public void run(int menuNum) {
-        //TODO check error when wrong number entered
-        //TODO may be use user exception
-        items.get(menuNum).run();
+    public void run(int menuItem) throws WrongMenuItemException {
+        if (!items.containsKey(menuItem)) throw new WrongMenuItemException();
+        items.get(menuItem).run();
     }
 
     public void add(int itemNumber, AbstractMenuItem item) {
@@ -24,7 +25,6 @@ public class MainMenu {
     public String getText() {
         StringBuilder sb = new StringBuilder(this.menuName);
         sb.append('\n');
-
         for (Integer i : items.keySet()) {
             sb
                     .append('\t')

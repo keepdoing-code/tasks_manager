@@ -1,29 +1,67 @@
 package ru.keepdoing.Menu;
 
-import ru.keepdoing.Controller.DBQueries;
+import ru.keepdoing.TasksExceptions.WrongMenuItemException;
 
 public class Menu {
 
-    public static final String DEV_MENU = new SimpleMenuBuilder()
-            .fillPattern("-", 20)
-            .addLine("Develop menu")
-            .addTab("1. Create data base and tables structure")
-            .addTab("2. Drop all tables in data base")
-            .addTab("3. Fill tables by demo data")
-            .addTab("4. Show tasks")
-            .addTab("5. Exit")
-            .add("> ")
-            .getString();
+    private MenuBuilder currentMenu;
+    private final MenuBuilder main = new MenuBuilder("Main menu");
+    private final MenuBuilder subMenu = new MenuBuilder("Sub menu 1");
 
-    public static final SimpleExecMenuBuilder execMenu = new SimpleExecMenuBuilder("Dev menu")
-            //TODO  Split addition menu entry into several parts
-            //TODO  May be we can attach query type to queries in DBQueries by creating new class (type) Query
-            //TODO  Send to add method only menu item text and Query(with query text and type). Auto convert all data in ExecMenuItem.
-            .add(1, new ExecMenuItem("Show tasks", DBQueries.GET_TASKS_QUERY, QueryType.many))
-            .add(2, new ExecMenuItem("Create tables", DBQueries.CREATE_TABLES_QUERY, QueryType.update))
-            .add(3, new ExecMenuItem("Exit", "Exit", QueryType.none));
+    public Menu() {
+        fillMenuItems();
+        currentMenu = main;
+    }
 
-    public static final String DEV_EXEC_MENU = execMenu.getString();
+    public void run(int num) throws WrongMenuItemException {
+        currentMenu.run(num);
+    }
+
+    public String getMenuText() {
+        return currentMenu.getText();
+    }
 
 
+    //Maybe we must fill methods in App class or any another class, where we create instance of DBQueries.
+    //TODO refactor code according to above sentence
+    private void fillMenuItems() {
+        main.add(1, new AbstractMenuItem("print") {
+            @Override
+            public void run() {
+                System.out.println("Main menu first item");
+            }
+        });
+
+        main.add(2, new AbstractMenuItem("Submenu") {
+            @Override
+            public void run() {
+                currentMenu = subMenu;
+            }
+        });
+
+        main.add(9, new AbstractMenuItem("Quit") {
+            @Override
+            public void run() {
+                System.out.println("Bye bye..");
+                System.exit(0);
+            }
+        });
+
+
+        subMenu.add(1, new AbstractMenuItem("print submenu") {
+            @Override
+            public void run() {
+                System.out.println("Sub menu item");
+            }
+        });
+
+        subMenu.add(2, new AbstractMenuItem("Go back") {
+            @Override
+            public void run() {
+                currentMenu = main;
+            }
+        });
+
+
+    }
 }

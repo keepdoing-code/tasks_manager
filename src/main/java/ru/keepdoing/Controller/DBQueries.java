@@ -2,7 +2,6 @@ package ru.keepdoing.Controller;
 
 import java.util.ArrayList;
 
-
 //TODO rename 'dfrom' to 'created' and 'dto' to 'deadline'
 //TODO add types: important immediate, not important immediate, important not immediate, not important not immediate
 public class DBQueries {
@@ -48,6 +47,17 @@ public class DBQueries {
 
     public void settingUp() {
         dbWorker.exec(PRAGMA_FOREIGN_KEYS_ON);
+    }
+
+    public void fillTables() {
+        this.addType("immediate");
+        this.addType("important");
+        this.addType("so-so");
+        this.addType("regular");
+
+        this.addStatus("done");
+        this.addStatus("postponed");
+        this.addStatus("working");
     }
 
     public void createTables() {
