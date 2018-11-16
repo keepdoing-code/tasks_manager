@@ -12,8 +12,8 @@ public class DBQueries {
     public static final String ADD_TASK_QUERY = "INSERT INTO tasks(task, tid, sid, dfrom, dto) VALUES ";
     public static final String GET_STATUSES_QUERY = "SELECT * FROM statuses;";
     public static final String GET_TYPES_QUERY = "SELECT * FROM types;";
-    public static final String GET_TASKS_QUERY = "SELECT * FROM tasks;";
-    public static final String TASKS_VIEW = "SELECT tasks.task, statuses.sname, types.tname FROM tasks, statuses, types WHERE (tasks.tid = types.id and tasks.sid = statuses.id);";
+    public static final String GET_TASKS_VIEW = "SELECT tasks.task, statuses.sname, types.tname FROM tasks, statuses, types WHERE (tasks.tid = types.id and tasks.sid = statuses.id);";
+    public static final String REMOVE_TASK = "DELETE FROM tasks WHERE id = ";
     public static final String CREATE_TABLES_QUERY =
             "CREATE TABLE if not exists statuses (id INTEGER PRIMARY KEY AUTOINCREMENT, sname text);" +
                     "CREATE TABLE if not exists types (id INTEGER PRIMARY KEY AUTOINCREMENT, tname text);" +
@@ -95,8 +95,13 @@ public class DBQueries {
         return getData(GET_TYPES_QUERY);
     }
 
-    public ArrayList<Object[]> getTasks() {
-        return getData(GET_TASKS_QUERY);
+    public ArrayList<Object[]> getTasksView() {
+        return getData(GET_TASKS_VIEW);
     }
+
+    public void removeTask(int taskId) {
+        dbWorker.execUpdate(REMOVE_TASK + taskId + ";");
+    }
+
 
 }
