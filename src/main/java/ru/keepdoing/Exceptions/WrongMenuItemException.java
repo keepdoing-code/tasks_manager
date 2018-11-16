@@ -1,4 +1,4 @@
-package ru.keepdoing.TasksExceptions;
+package ru.keepdoing.Exceptions;
 
 public class WrongMenuItemException extends Exception {
 }

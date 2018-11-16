@@ -1,7 +1,7 @@
 package ru.keepdoing.View;
 
-import ru.keepdoing.Menu.Menu;
-import ru.keepdoing.TasksExceptions.WrongMenuItemException;
+import ru.keepdoing.Menu.MenuWrapper;
+import ru.keepdoing.Exceptions.WrongMenuItemException;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -9,10 +9,10 @@ import java.util.Scanner;
 public class ConsoleGUI {
     private final String WRONG_INPUT = "Wrong input. Enter item number again: ";
     private final String WRONG_MENU_ITEM = "Nonexistent menu item. Try again: ";
-    private final Menu menu;
+    private final MenuWrapper menu;
 
 
-    public ConsoleGUI(Menu menu) {
+    public ConsoleGUI(MenuWrapper menu) {
         this.menu = menu;
     }
 
@@ -20,7 +20,7 @@ public class ConsoleGUI {
         Scanner consoleInput = new Scanner(System.in);
 
         try {
-            print(menu.getMenuText());
+            print(menu.getCurrentMenuText());
             int choice = Integer.parseInt(consoleInput.next());
             menu.run(choice);
         } catch (NumberFormatException e) {
