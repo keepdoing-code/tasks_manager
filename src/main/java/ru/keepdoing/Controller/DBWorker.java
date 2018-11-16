@@ -13,7 +13,8 @@ public class DBWorker {
         this.filename = file;
     }
 
-    public void prepExec(final String query, final Object[] params) {
+    public int prepExec(final String query, final Object[] params) {
+        int status = -1;
         try {
             Connection cn = this.connect();
             PreparedStatement ps = cn.prepareStatement(query);
@@ -22,13 +23,13 @@ public class DBWorker {
                 ps.setObject(i + 1, params[i]);
             }
 
-            int status = ps.executeUpdate();
-            //Log.s("Execute prepared statement status - " + status);
-
+            status = ps.executeUpdate();
+            Log.s("DB updated records: " + status);
             closeConnection(cn);
         } catch (SQLException e) {
             System.err.println(e.getMessage());
         }
+        return status;
     }
 
     public void exec(String query) {
