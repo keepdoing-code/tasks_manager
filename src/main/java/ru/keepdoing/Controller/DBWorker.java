@@ -1,5 +1,7 @@
 package ru.keepdoing.Controller;
 
+import ru.keepdoing.View.Log;
+
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -9,6 +11,24 @@ public class DBWorker {
 
     DBWorker(String file) {
         this.filename = file;
+    }
+
+    public void prepExec(final String query, final Object[] params) {
+        try {
+            Connection cn = this.connect();
+            PreparedStatement ps = cn.prepareStatement(query);
+
+            for (int i = 0; i < params.length; i++) {
+                ps.setObject(i, params[i]);
+            }
+
+            int status = ps.executeUpdate();
+            Log.s("Execute prepared statement status - " + status);
+
+            closeConnection(cn);
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+        }
     }
 
     public void exec(String query) {

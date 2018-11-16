@@ -12,8 +12,9 @@ public class DBQueries {
     public static final String ADD_TASK_QUERY = "INSERT INTO tasks(task, tid, sid, dfrom, dto) VALUES ";
     public static final String GET_STATUSES_QUERY = "SELECT * FROM statuses;";
     public static final String GET_TYPES_QUERY = "SELECT * FROM types;";
-    public static final String GET_TASKS_VIEW = "SELECT tasks.task, statuses.sname, types.tname FROM tasks, statuses, types WHERE (tasks.tid = types.id and tasks.sid = statuses.id);";
+    public static final String GET_TASKS_VIEW = "SELECT tasks.id, tasks.task, types.tname, statuses.sname FROM tasks, statuses, types WHERE (tasks.tid = types.id and tasks.sid = statuses.id);";
     public static final String REMOVE_TASK = "DELETE FROM tasks WHERE id = ";
+    public static final String UPDATE_TASK_STATUS = "UPDATE tasks SET sid = ? WHERE id = ?;";
     public static final String CREATE_TABLES_QUERY =
             "CREATE TABLE if not exists statuses (id INTEGER PRIMARY KEY AUTOINCREMENT, sname text);" +
                     "CREATE TABLE if not exists types (id INTEGER PRIMARY KEY AUTOINCREMENT, tname text);" +
@@ -32,7 +33,7 @@ public class DBQueries {
     private final String dbFilename;
 
 
-    public DBQueries(String dbFilename){
+    public DBQueries(String dbFilename) {
         this.dbFilename = dbFilename;
         this.dbWorker = new DBWorker(dbFilename);
     }
@@ -55,9 +56,18 @@ public class DBQueries {
         this.addType("so-so");
         this.addType("regular");
 
-        this.addStatus("done");
+        this.addStatus("not started");
         this.addStatus("postponed");
         this.addStatus("working");
+        this.addStatus("done");
+    }
+
+    public void fillTestTasks() {
+        this.addTask("Task 1", 1, 1, 0, 0);
+        this.addTask("Task 2", 1, 1, 0, 0);
+        this.addTask("Task 3", 2, 2, 0, 0);
+        this.addTask("Task 4", 3, 3, 0, 0);
+        this.addTask("Task 5", 1, 4, 0, 0);
     }
 
     public void createTables() {

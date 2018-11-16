@@ -69,7 +69,9 @@ public class FillMenuActions {
         menu.addActionToMenu(subMenu, new AbstractMenuItem("Change status") {
             @Override
             public void run() {
-                System.out.println(this.getName());
+                Log.s(choice);
+                dbQueries.getDbWorker();
+                menu.callSubMenu(rootMenu);
             }
         });
 
@@ -78,6 +80,7 @@ public class FillMenuActions {
             public void run() {
                 Log.s(choice);
                 dbQueries.removeTask(choice);
+                menu.callSubMenu(rootMenu);
             }
         });
     }

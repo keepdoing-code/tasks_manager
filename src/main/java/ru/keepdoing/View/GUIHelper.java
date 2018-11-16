@@ -34,11 +34,24 @@ public class GUIHelper {
 
         try {
             print(askMessage);
+            print("\n> ");
             choice = scanner.nextInt();
         } catch (NumberFormatException e) {
             print(WRONG_INPUT);
             return askChoice(askMessage);
         }
         return choice;
+    }
+
+    public static String askString(final String askMessage) {
+        Scanner scanner = new Scanner(System.in);
+
+        try {
+            print(askMessage);
+            return scanner.next();
+        } catch (Exception e) {
+            Log.s(e.getMessage());
+            return askString(askMessage);
+        }
     }
 }
