@@ -1,35 +1,41 @@
 package ru.keepdoing.Model;
 
 import ru.keepdoing.Menu.AbstractMenuItem;
+import ru.keepdoing.Menu.MenuBuilder;
 import ru.keepdoing.Menu.MenuWrapper;
 
 public class FillMenuActions {
 
-    public static void fill(final MenuWrapper menu) {
-        menu.addMenu("Sub menu", "Root menu");
-        menu.addActionToMenu("Sub menu", new AbstractMenuItem("sub menu first item") {
+    public FillMenuActions(final MenuWrapper menu) {
+
+        MenuBuilder rootMenu = menu.addMenu("Root menu");
+        menu.setRootMenu(rootMenu);
+
+        final MenuBuilder subMenu = menu.addSubMenu("Sub menu", rootMenu);
+
+        menu.addActionToMenu(subMenu, new AbstractMenuItem("sub menu first item") {
             @Override
             public void run() {
                 System.out.println(this.getName());
             }
         });
 
-        menu.addActionToMenu("Root menu", new AbstractMenuItem("first item") {
+        menu.addActionToMenu(rootMenu, new AbstractMenuItem("first item") {
             @Override
             public void run() {
                 System.out.println(this.getName());
             }
         });
 
-        menu.addActionToMenu("Root menu", new AbstractMenuItem("call sub menu") {
+        menu.addActionToMenu(rootMenu, new AbstractMenuItem("call sub menu") {
             @Override
             public void run() {
                 System.out.println(this.getName());
-                menu.callSubMenu("Sub menu");
+                menu.callSubMenu(subMenu);
             }
         });
 
-        menu.addActionToMenu("Root menu", new AbstractMenuItem("quit") {
+        menu.addActionToMenu(rootMenu, new AbstractMenuItem("quit") {
             @Override
             public void run() {
                 System.exit(0);

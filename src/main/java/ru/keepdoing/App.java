@@ -19,9 +19,8 @@ public class App {
 //            Log.s("DB created. Tables created");
 //        }
 
-        MenuWrapper menu = new MenuWrapper("Root menu");
-        FillMenuActions.fill(menu);
-        ConsoleGUI consoleGUI = new ConsoleGUI(menu);
-        consoleGUI.askMenuItem();
+        MenuWrapper menu = new MenuWrapper();
+        new FillMenuActions(menu);
+        new ConsoleGUI(menu).askMenuItem();
     }
 }
