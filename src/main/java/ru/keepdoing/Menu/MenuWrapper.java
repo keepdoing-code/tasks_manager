@@ -8,7 +8,7 @@ public class MenuWrapper {
 
     private MenuBuilder currentMenu;
 
-    private HashMap<String, MenuBuilder> structure = new HashMap();
+    private HashMap<String, MenuBuilder> structure = new HashMap<>();
 
 
     public MenuWrapper(final String rootMenuName) {
