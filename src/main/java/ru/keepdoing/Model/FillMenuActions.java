@@ -1,11 +1,10 @@
 package ru.keepdoing.Model;
 
 import ru.keepdoing.Controller.DBQueries;
-import ru.keepdoing.Menu.AbstractMenuItem;
-import ru.keepdoing.Menu.MenuBuilder;
-import ru.keepdoing.Menu.MenuWrapper;
+import ru.keepdoing.Model.Menu.AbstractMenuItem;
+import ru.keepdoing.Model.Menu.MenuBuilder;
+import ru.keepdoing.Model.Menu.MenuWrapper;
 import ru.keepdoing.View.GUIHelper;
-import ru.keepdoing.View.Log;
 
 public class FillMenuActions {
 

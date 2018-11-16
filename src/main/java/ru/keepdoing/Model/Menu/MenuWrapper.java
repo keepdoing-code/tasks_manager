@@ -1,6 +1,6 @@
-package ru.keepdoing.Menu;
+package ru.keepdoing.Model.Menu;
 
-import ru.keepdoing.Exceptions.WrongMenuItemException;
+import ru.keepdoing.View.WrongMenuItemException;
 
 import java.util.HashMap;
 

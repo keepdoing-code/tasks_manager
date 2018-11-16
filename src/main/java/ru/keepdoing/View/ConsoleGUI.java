@@ -1,7 +1,7 @@
 package ru.keepdoing.View;
 
-import ru.keepdoing.Menu.MenuWrapper;
-import ru.keepdoing.Exceptions.WrongMenuItemException;
+import ru.keepdoing.Model.Menu.MenuWrapper;
+
 import java.util.Scanner;
 
 public class ConsoleGUI {
@@ -17,7 +17,7 @@ public class ConsoleGUI {
         Scanner consoleInput = new Scanner(System.in);
 
         try {
-            GUIHelper.print(menu.getCurrentMenuText());
+            GUIHelper.print(menu.getCurrentMenuText() + "> ");
             int choice = Integer.parseInt(consoleInput.next());
             menu.run(choice);
         } catch (NumberFormatException e) {

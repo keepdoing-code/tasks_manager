@@ -1,7 +1,7 @@
 package ru.keepdoing;
 
 import ru.keepdoing.Controller.DBQueries;
-import ru.keepdoing.Menu.MenuWrapper;
+import ru.keepdoing.Model.Menu.MenuWrapper;
 import ru.keepdoing.Model.FillMenuActions;
 import ru.keepdoing.View.ConsoleGUI;
 import ru.keepdoing.View.Log;

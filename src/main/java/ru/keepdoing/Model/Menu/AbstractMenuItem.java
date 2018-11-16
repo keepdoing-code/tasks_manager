@@ -1,4 +1,4 @@
-package ru.keepdoing.Menu;
+package ru.keepdoing.Model.Menu;
 
 public abstract class AbstractMenuItem {
     private String name;

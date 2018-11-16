@@ -49,7 +49,10 @@ public class DBWorker {
             Connection cn = this.connect();
             Statement st = cn.createStatement();
             st.setQueryTimeout(30);
-            st.executeUpdate(query);
+
+            int status = st.executeUpdate(query);
+            Log.s("DB updated records: " + status);
+
             closeConnection(cn);
         } catch (SQLException e) {
             System.err.println(e.getMessage());
