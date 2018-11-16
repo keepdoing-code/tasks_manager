@@ -38,10 +38,6 @@ public class DBQueries {
         this.dbWorker = new DBWorker(dbFilename);
     }
 
-    public String getFilename() {
-        return dbFilename;
-    }
-
     public DBWorker getDbWorker() {
         return dbWorker;
     }
@@ -72,10 +68,6 @@ public class DBQueries {
 
     public void createTables() {
         dbWorker.execUpdate(CREATE_TABLES_QUERY);
-    }
-
-    public void dropTables() {
-        dbWorker.execUpdate(DROP_TABLES_QUERY);
     }
 
     public void addStatus(String status) {
@@ -113,5 +105,9 @@ public class DBQueries {
         dbWorker.execUpdate(REMOVE_TASK + taskId + ";");
     }
 
+    public void changeTaskStatus(final int taskId, final int newStatus) {
+        Object[] params = {newStatus, taskId};
+        dbWorker.prepExec(UPDATE_TASK_STATUS, params);
+    }
 
 }

@@ -19,11 +19,11 @@ public class DBWorker {
             PreparedStatement ps = cn.prepareStatement(query);
 
             for (int i = 0; i < params.length; i++) {
-                ps.setObject(i, params[i]);
+                ps.setObject(i + 1, params[i]);
             }
 
             int status = ps.executeUpdate();
-            Log.s("Execute prepared statement status - " + status);
+            //Log.s("Execute prepared statement status - " + status);
 
             closeConnection(cn);
         } catch (SQLException e) {

@@ -70,7 +70,7 @@ public class FillMenuActions {
             @Override
             public void run() {
                 Log.s(choice);
-                dbQueries.getDbWorker();
+                dbQueries.changeTaskStatus(choice, GUIHelper.askChoice("Enter status id"));
                 menu.callSubMenu(rootMenu);
             }
         });
