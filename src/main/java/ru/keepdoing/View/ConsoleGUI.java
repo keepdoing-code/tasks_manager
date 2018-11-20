@@ -1,8 +1,6 @@
 package ru.keepdoing.View;
 
-import ru.keepdoing.Model.Menu.MenuWrapper;
-
-import java.util.List;
+import ru.keepdoing.Model.MenuWrapper;
 
 public class ConsoleGUI {
 
@@ -10,9 +8,10 @@ public class ConsoleGUI {
 
     public ConsoleGUI(MenuWrapper menu) {
         this.menu = menu;
+        askMenuItem();
     }
 
-    public void askMenuItem() {
+    private void askMenuItem() {
         try {
             String menuText = menu.getCurrentMenuText();
             int choice = GUIHelper.askInteger(menuText);

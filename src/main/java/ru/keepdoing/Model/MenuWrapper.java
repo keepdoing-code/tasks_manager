@@ -1,4 +1,4 @@
-package ru.keepdoing.Model.Menu;
+package ru.keepdoing.Model;
 
 import ru.keepdoing.View.WrongMenuItemException;
 
@@ -6,17 +6,12 @@ import java.util.*;
 
 public class MenuWrapper {
 
-    private static final String GO_BACK = "Go back";
     private MenuBuilder currentMenu;
     private HashMap<String, MenuBuilder> structure = new HashMap<>();
 
 
-    public void run(int num) throws WrongMenuItemException {
+    public void run(final int num) throws WrongMenuItemException {
         currentMenu.run(num);
-    }
-
-    public String getCurrentMenuName() {
-        return currentMenu.getMenuName();
     }
 
     public String getCurrentMenuText() {
@@ -33,9 +28,9 @@ public class MenuWrapper {
         return sb.toString();
     }
 
-    public MenuBuilder addSubMenu(final String name, final MenuBuilder rootMenu) {
+    public MenuBuilder addSubMenu(final String name, final String goBack, final MenuBuilder rootMenu) {
         MenuBuilder mb = new MenuBuilder(name);
-        mb.addAction(new AbstractMenuItem(GO_BACK) {
+        mb.addAction(new AbstractMenuItem(goBack) {
             @Override
             public void run() {
                 currentMenu = rootMenu;
@@ -51,7 +46,7 @@ public class MenuWrapper {
         return mb;
     }
 
-    public void addActionToMenu(final MenuBuilder mb, AbstractMenuItem item) {
+    public void addActionToMenu(final MenuBuilder mb, final AbstractMenuItem item) {
         structure.get(mb.getMenuName()).addAction(item);
     }
 

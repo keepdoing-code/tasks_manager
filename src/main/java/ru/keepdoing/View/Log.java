@@ -11,6 +11,6 @@ public class Log {
                 .append("] - ")
                 .append(s)
                 .append("\n\n");
-        //System.out.print(sb.toString());
+//        System.out.print(sb.toString());
     }
 }

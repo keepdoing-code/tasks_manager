@@ -2,7 +2,9 @@ package ru.keepdoing.Controller;
 
 import ru.keepdoing.View.Log;
 
+import javax.jws.Oneway;
 import java.sql.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class DBWorker {
@@ -27,6 +29,7 @@ public class DBWorker {
             Log.s(query + "  " + status);
             closeConnection(cn);
         } catch (SQLException e) {
+            Log.s(e.getMessage());
             System.err.println(e.getMessage());
         }
         return status;
@@ -62,26 +65,6 @@ public class DBWorker {
         }
     }
 
-    public Object execOne(String query) {
-        try {
-            Connection cn = this.connect();
-            Statement st = cn.createStatement();
-            st.setQueryTimeout(30);
-            ResultSet rs = st.executeQuery(query);
-            final int count = rs.getMetaData().getColumnCount();
-            if (count > 1) {
-                return "";
-            }
-            rs.first();
-            Object obj = rs.getObject(1);
-            closeConnection(cn);
-            return obj;
-        } catch (SQLException e) {
-            System.err.println(e.getMessage());
-        }
-        return null;
-    }
-
     public ArrayList<Object[]> execMany(String query) {
         try {
             Connection cn = this.connect();
@@ -89,7 +72,15 @@ public class DBWorker {
             st.setQueryTimeout(30);
             ResultSet rs = st.executeQuery(query);
             final int columnCount = rs.getMetaData().getColumnCount();
+
+
+            Object[] head = new Object[columnCount];
+            for (int i = 0; i < columnCount; i++) {
+                head[i] = rs.getMetaData().getColumnName(i + 1);
+            }
+
             ArrayList<Object[]> data = new ArrayList<>();
+            data.add(head);
 
             while (rs.next()) {
                 Object[] obj = new Object[columnCount];
