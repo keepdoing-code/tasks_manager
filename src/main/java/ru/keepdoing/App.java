@@ -20,7 +20,6 @@ public class App {
             dbQueries.settingUp();
             dbQueries.createTables();
             dbQueries.fillTables();
-            dbQueries.fillTestTasks();
             Log.s("DB created. Tables created");
         }
 

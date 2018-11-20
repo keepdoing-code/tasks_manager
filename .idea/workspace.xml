@@ -2,10 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96fb9ed0-3326-4175-8aa5-0be5d17036c3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/keepdoing/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Controller/DBQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Controller/DBQueries.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Controller/DBWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Controller/DBWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Model/FillMenuActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Model/FillMenuActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Model/Menu/MenuBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Model/Menu/MenuBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Model/Menu/MenuWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/Model/Menu/MenuWrapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/keepdoing/View/ConsoleGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/View/ConsoleGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks.db" beforeDir="false" afterPath="$PROJECT_DIR$/tasks.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/keepdoing/View/GUIHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/View/GUIHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/keepdoing/View/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/keepdoing/View/Log.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/keepdoing/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/keepdoing/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ru/keepdoing/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ru/keepdoing/AppTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tasks.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,30 +65,32 @@
     <session id="1019264935">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="4741" />
-          <entry key="txt" value="595" />
+          <entry key="java" value="6870" />
+          <entry key="txt" value="699" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4741" />
-          <entry key="PLAIN_TEXT" value="595" />
+          <entry key="JAVA" value="6870" />
+          <entry key="PLAIN_TEXT" value="699" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="21" />
+          <entry key="java" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="21" />
+          <entry key="JAVA" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -91,8 +106,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
+            <state relative-caret-position="315">
+              <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -103,8 +118,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/View/ConsoleGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="28" column="22" lean-forward="true" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+            <state relative-caret-position="330">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -112,14 +127,31 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/MenuBuilder.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Model/Menu/MenuBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-23">
-              <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+            <state relative-caret-position="390">
+              <caret line="37" column="42" lean-forward="true" selection-start-line="33" selection-start-column="8" selection-end-line="37" selection-end-column="42" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#369#370#0" expanded="true" />
+                <element signature="method#MenuBuilder#0;class#MenuBuilder#0" />
+                <element signature="method#run#0;class#MenuBuilder#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Model/Menu/MenuWrapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+              <folding>
+                <element signature="method#run#0;class#MenuWrapper#0" />
+                <element signature="method#getCurrentMenuText#0;class#MenuWrapper#0" />
+                <element signature="method#addSubMenu#0;class#MenuWrapper#0" />
+                <element signature="class#595:742" />
+                <element signature="method#addMenu#0;class#MenuWrapper#0" />
+                <element signature="method#addActionToMenu#0;class#MenuWrapper#0" />
               </folding>
             </state>
           </provider>
@@ -128,59 +160,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/View/GUIHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+            <state relative-caret-position="270">
+              <caret line="45" column="60" selection-start-line="45" selection-start-column="60" selection-end-line="45" selection-end-column="60" />
               <folding>
+                <element signature="method#askInteger#0;class#GUIHelper#0" />
+                <element signature="method#askString#0;class#GUIHelper#0" />
+                <element signature="method#askDate#0;class#GUIHelper#0" />
                 <element signature="method#printData#0;class#GUIHelper#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Model/FillMenuActions.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="72" column="93" selection-start-line="72" selection-start-column="93" selection-end-line="72" selection-end-column="93" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#822#823#0" expanded="true" />
-                <element signature="e#862#863#0" expanded="true" />
-                <element signature="e#1483#1484#0" expanded="true" />
-                <element signature="e#1529#1530#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Controller/DBQueries.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="103" selection-start-line="103" selection-end-line="103" />
-              <folding>
-                <element signature="n#!!doc;n#DBQueries#0" />
-                <element signature="method#DBQueries#0;class#DBQueries#0" />
-                <element signature="method#addTask#0;class#DBQueries#0" />
-                <element signature="method#getData#0;class#DBQueries#0" />
-                <element signature="e#3820#3821#0" expanded="true" />
-                <element signature="e#3883#3884#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Controller/DBWorker.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="54" column="12" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
-              <folding>
-                <element signature="method#exec#0;class#DBWorker#0" />
-                <element signature="method#execOne#0;class#DBWorker#0" />
-                <element signature="method#execMany#0;class#DBWorker#0" />
-                <element signature="method#connect#0;class#DBWorker#0" />
-                <element signature="method#closeConnection#0;class#DBWorker#0" />
               </folding>
             </state>
           </provider>
@@ -196,6 +182,15 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>&quot;\n&gt; &quot;</find>
+      <find>\n&gt;</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>INPUT_PROMPT</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -242,12 +237,16 @@
         <option value="$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/MenuBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/MenuWrapper.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/keepdoing/AppTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/keepdoing/Controller/DBWorker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/keepdoing/Controller/DBQueries.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/keepdoing/Controller/DateHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/keepdoing/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/keepdoing/View/GUIHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/keepdoing/View/Log.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/keepdoing/Model/FillMenuActions.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/keepdoing/Controller/DBQueries.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/keepdoing/View/ConsoleGUI.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/keepdoing/Controller/DBWorker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/keepdoing/Model/Menu/MenuWrapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/keepdoing/Model/Menu/MenuBuilder.java" />
       </list>
     </option>
   </component>
@@ -258,7 +257,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="4" />
     <option name="y" value="22" />
     <option name="width" value="1362" />
@@ -270,6 +269,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -320,6 +320,16 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="keepdoing" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tasks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tasks" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="keepdoing" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
               <item name="Menu" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -339,15 +349,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542400310300" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542724476596" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
@@ -379,19 +387,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConsoleGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.keepdoing.View.ConsoleGUI" />
-      <module name="tasks" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.keepdoing.Model.Menu.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="AppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tasks" />
       <extension name="coverage">
@@ -410,16 +405,13 @@
     </configuration>
     <list>
       <item itemvalue="Application.App" />
-      <item itemvalue="Application.ConsoleGUI" />
       <item itemvalue="JUnit.AppTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.App" />
         <item itemvalue="JUnit.AppTest" />
-        <item itemvalue="Application.ConsoleGUI" />
         <item itemvalue="Application.App" />
-        <item itemvalue="JUnit.AppTest" />
       </list>
     </recent_temporary>
   </component>
@@ -623,7 +615,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542399919473</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Tested on wrong input data.&#10;Refactor packages.&#10;Added log information when working with db.">
+      <created>1542400422510</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1542400422510</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -644,10 +643,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="4" y="22" width="1362" height="746" extended-state="6" />
+    <frame x="4" y="22" width="1362" height="746" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.498452" visible="true" weight="0.19166666" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.498452" visible="true" weight="0.19469696" />
       <window_info id="Structure" order="1" sideWeight="0.501548" side_tool="true" weight="0.18312986" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -657,15 +656,15 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32886904" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49772727" weight="0.4082569" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49772727" weight="0.36697248" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49924242" weight="0.32973805" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49924242" weight="0.32973805" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49924242" weight="0.32874617" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5022727" side_tool="true" weight="0.40986133" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49772727" weight="0.32874617" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49924242" weight="0.32740742" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49924242" weight="0.32721713" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -730,8 +729,21 @@
     <MESSAGE value="First steps to working application. Some menu items now work normally." />
     <MESSAGE value="Added and tested prepared statement functionality, added change task status function." />
     <MESSAGE value="Full working change status function." />
-    <option name="LAST_COMMIT_MESSAGE" value="Full working change status function." />
+    <MESSAGE value="Tested on wrong input data.&#10;Refactor packages.&#10;Added log information when working with db." />
+    <option name="LAST_COMMIT_MESSAGE" value="Tested on wrong input data.&#10;Refactor packages.&#10;Added log information when working with db." />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/keepdoing/View/Log.java</url>
+          <line>7</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -748,7 +760,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/QueryType.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/SimpleExecMenuBuilder.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/SimpleMenuBuilder.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Exceptions/WrongMenuItemException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/View/WrongMenuItemException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="53" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
@@ -758,20 +770,14 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/InputReader.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Actions.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/InnerTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/AbstractMenuItem.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Model/Menu/AbstractMenuItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/ConsoleGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/ConsoleGUI.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/keepdoing/AppTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -779,106 +785,168 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/View/Log.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Controller/DBWorker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="180">
+          <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
           <folding>
-            <element signature="method#s#0;class#Log#0" />
+            <element signature="method#prepExec#0;class#DBWorker#0" />
+            <element signature="method#exec#0;class#DBWorker#0" />
+            <element signature="method#execUpdate#0;class#DBWorker#0" />
+            <element signature="method#execOne#0;class#DBWorker#0" />
+            <element signature="method#execMany#0;class#DBWorker#0" />
+            <element signature="method#connect#0;class#DBWorker#0" />
+            <element signature="method#closeConnection#0;class#DBWorker#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.jdk/Contents/Home/lib/src.zip!/java.base/java/text/SimpleDateFormat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-812">
+          <caret line="572" column="11" selection-start-line="572" selection-start-column="11" selection-end-line="572" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Controller/DBQueries.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="62" column="42" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="42" />
+          <folding>
+            <element signature="n#!!doc;n#DBQueries#0" />
+            <element signature="method#DBQueries#0;class#DBQueries#0" />
+            <element signature="method#fillTables#0;class#DBQueries#0" />
+            <element signature="method#getData#0;class#DBQueries#0" />
+            <element signature="method#changeTaskStatus#0;class#DBQueries#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Controller/DateHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="58" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.jdk/Contents/Home/lib/src.zip!/java.base/java/time/temporal/ChronoField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="713" column="28" lean-forward="true" selection-start-line="713" selection-start-column="28" selection-end-line="713" selection-end-column="28" />
+          <folding>
+            <element signature="e#34540#34541#0" expanded="true" />
+            <element signature="e#34599#34600#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.jdk/Contents/Home/lib/src.zip!/java.base/java/time/temporal/ValueRange.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="310" column="39" selection-start-line="310" selection-start-column="22" selection-end-line="310" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.jdk/Contents/Home/lib/src.zip!/java.base/java/time/LocalDate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="267" column="20" selection-start-line="267" selection-start-column="20" selection-end-line="267" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
+        <state relative-caret-position="315">
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/MenuWrapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/View/Log.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="26" column="21" lean-forward="true" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/View/GUIHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
-          <folding>
-            <element signature="method#printData#0;class#GUIHelper#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Menu/MenuBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-23">
-          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#369#370#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/View/ConsoleGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="28" column="22" lean-forward="true" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#s#0;class#Log#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Model/FillMenuActions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="72" column="93" selection-start-line="72" selection-start-column="93" selection-end-line="72" selection-end-column="93" />
+        <state relative-caret-position="360">
+          <caret line="30" column="42" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
+          <folding>
+            <element signature="method#FillMenuActions#0;class#FillMenuActions#0" />
+            <element signature="method#fillRootMenu#0;class#FillMenuActions#0" />
+            <element signature="class#781:980" />
+            <element signature="class#1027:1326" />
+            <element signature="method#run#0;class#1027:1326" />
+            <element signature="class#1373:1835" />
+            <element signature="method#run#0;class#1373:1835" />
+            <element signature="class#1882:2018" />
+            <element signature="method#fillSubmenu#0;class#FillMenuActions#0" />
+            <element signature="class#2161:2486" />
+            <element signature="method#run#0;class#2161:2486" />
+            <element signature="class#2532:2728" />
+            <element signature="method#run#0;class#2532:2728" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/View/GUIHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="45" column="60" selection-start-line="45" selection-start-column="60" selection-end-line="45" selection-end-column="60" />
+          <folding>
+            <element signature="method#askInteger#0;class#GUIHelper#0" />
+            <element signature="method#askString#0;class#GUIHelper#0" />
+            <element signature="method#askDate#0;class#GUIHelper#0" />
+            <element signature="method#printData#0;class#GUIHelper#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/View/ConsoleGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#822#823#0" expanded="true" />
-            <element signature="e#862#863#0" expanded="true" />
-            <element signature="e#1483#1484#0" expanded="true" />
-            <element signature="e#1529#1530#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Controller/DBQueries.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Model/Menu/MenuWrapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="103" selection-start-line="103" selection-end-line="103" />
+        <state relative-caret-position="225">
+          <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
           <folding>
-            <element signature="n#!!doc;n#DBQueries#0" />
-            <element signature="method#DBQueries#0;class#DBQueries#0" />
-            <element signature="method#addTask#0;class#DBQueries#0" />
-            <element signature="method#getData#0;class#DBQueries#0" />
-            <element signature="e#3820#3821#0" expanded="true" />
-            <element signature="e#3883#3884#0" expanded="true" />
+            <element signature="method#run#0;class#MenuWrapper#0" />
+            <element signature="method#getCurrentMenuText#0;class#MenuWrapper#0" />
+            <element signature="method#addSubMenu#0;class#MenuWrapper#0" />
+            <element signature="class#595:742" />
+            <element signature="method#addMenu#0;class#MenuWrapper#0" />
+            <element signature="method#addActionToMenu#0;class#MenuWrapper#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Controller/DBWorker.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/keepdoing/Model/Menu/MenuBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="54" column="12" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
+        <state relative-caret-position="390">
+          <caret line="37" column="42" lean-forward="true" selection-start-line="33" selection-start-column="8" selection-end-line="37" selection-end-column="42" />
           <folding>
-            <element signature="method#exec#0;class#DBWorker#0" />
-            <element signature="method#execOne#0;class#DBWorker#0" />
-            <element signature="method#execMany#0;class#DBWorker#0" />
-            <element signature="method#connect#0;class#DBWorker#0" />
-            <element signature="method#closeConnection#0;class#DBWorker#0" />
+            <element signature="method#MenuBuilder#0;class#MenuBuilder#0" />
+            <element signature="method#run#0;class#MenuBuilder#0" />
           </folding>
         </state>
       </provider>

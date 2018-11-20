@@ -24,7 +24,7 @@ public class DBWorker {
             }
 
             status = ps.executeUpdate();
-            Log.s("DB updated records: " + status);
+            Log.s(query + "  " + status);
             closeConnection(cn);
         } catch (SQLException e) {
             System.err.println(e.getMessage());
@@ -37,7 +37,10 @@ public class DBWorker {
             Connection cn = this.connect();
             Statement st = cn.createStatement();
             st.setQueryTimeout(30);
-            st.execute(query);
+            boolean status = st.execute(query);
+
+            Log.s(query + "  " + status);
+
             this.closeConnection(cn);
         } catch (SQLException e) {
             System.err.println(e.getMessage());
@@ -51,7 +54,7 @@ public class DBWorker {
             st.setQueryTimeout(30);
 
             int status = st.executeUpdate(query);
-            Log.s("DB updated records: " + status);
+            Log.s(query + "  " + status);
 
             closeConnection(cn);
         } catch (SQLException e) {
@@ -95,6 +98,9 @@ public class DBWorker {
                 }
                 data.add(obj);
             }
+
+            Log.s(query);
+
             closeConnection(cn);
             return data;
         } catch (SQLException e) {

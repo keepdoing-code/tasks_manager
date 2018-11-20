@@ -10,9 +10,10 @@ public class DBQueries {
     public static final String ADD_STATUS_QUERY = "INSERT INTO statuses(sname) VALUES ";
     public static final String ADD_TYPE_QUERY = "INSERT INTO types(tname) VALUES ";
     public static final String ADD_TASK_QUERY = "INSERT INTO tasks(task, tid, sid, dfrom, dto) VALUES ";
+    public static final String ADD_TASK_QUERY_PREP = "INSERT INTO tasks(task, tid, sid, dfrom, dto) VALUES (?, ?, ?, ?, ?);";
     public static final String GET_STATUSES_QUERY = "SELECT * FROM statuses;";
     public static final String GET_TYPES_QUERY = "SELECT * FROM types;";
-    public static final String GET_TASKS_VIEW = "SELECT tasks.id, tasks.task, types.tname, statuses.sname FROM tasks, statuses, types WHERE (tasks.tid = types.id and tasks.sid = statuses.id);";
+    public static final String GET_TASKS_VIEW = "SELECT tasks.id, tasks.task, types.tname, statuses.sname, tasks.dfrom, tasks.dto FROM tasks, statuses, types WHERE (tasks.tid = types.id and tasks.sid = statuses.id);";
     public static final String REMOVE_TASK = "DELETE FROM tasks WHERE id = ";
     public static final String UPDATE_TASK_STATUS = "UPDATE tasks SET sid = ? WHERE id = ?;";
     public static final String CREATE_TABLES_QUERY =
@@ -59,11 +60,11 @@ public class DBQueries {
     }
 
     public void fillTestTasks() {
-        this.addTask("Task 1", 1, 1, 0, 0);
-        this.addTask("Task 2", 1, 1, 0, 0);
-        this.addTask("Task 3", 2, 2, 0, 0);
-        this.addTask("Task 4", 3, 3, 0, 0);
-        this.addTask("Task 5", 1, 4, 0, 0);
+        this.addTask("Task 1", 1, 1, "", "");
+        this.addTask("Task 2", 1, 1, "", "");
+        this.addTask("Task 3", 2, 2, "", "");
+        this.addTask("Task 4", 3, 3, "", "");
+        this.addTask("Task 5", 1, 4, "", "");
     }
 
     public void createTables() {
@@ -78,10 +79,12 @@ public class DBQueries {
         dbWorker.execUpdate(ADD_TYPE_QUERY + "('" + type + "');");
     }
 
-    public void addTask(String task, int typeId, int statusId, int dateFrom, int dateTo) {
-        final String query = ADD_TASK_QUERY + "('" +
-                task + "'," + typeId + "," + statusId + "," + dateFrom + "," + dateTo + ");";
-        dbWorker.execUpdate(query);
+    public void addTask(String task, int typeId, int statusId, String dateFrom, String dateTo) {
+//        final String query = ADD_TASK_QUERY + "('" + task + "'," + typeId + "," + statusId + "," + dateFrom + "," + dateTo + ");";
+//        dbWorker.execUpdate(query);
+//        "INSERT INTO tasks(task, tid, sid, dfrom, dto) VALUES ?, ?, ?, ?, ?;";
+        Object[] params = {task, typeId, statusId, dateFrom, dateTo};
+        dbWorker.prepExec(ADD_TASK_QUERY_PREP, params);
     }
 
     public ArrayList<Object[]> getData(String query) {

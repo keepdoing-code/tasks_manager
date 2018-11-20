@@ -10,11 +10,7 @@ public class Log {
                 .append(new Timestamp(System.currentTimeMillis()).toString())
                 .append("] - ")
                 .append(s)
-                .append('\n');
-        System.out.print(sb.toString());
-    }
-
-    public static void s(int i) {
-        s(String.valueOf(i));
+                .append("\n\n");
+        //System.out.print(sb.toString());
     }
 }

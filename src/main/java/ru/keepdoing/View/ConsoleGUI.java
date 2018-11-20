@@ -2,30 +2,25 @@ package ru.keepdoing.View;
 
 import ru.keepdoing.Model.Menu.MenuWrapper;
 
-import java.util.Scanner;
+import java.util.List;
 
 public class ConsoleGUI {
 
     private final MenuWrapper menu;
-
 
     public ConsoleGUI(MenuWrapper menu) {
         this.menu = menu;
     }
 
     public void askMenuItem() {
-        Scanner consoleInput = new Scanner(System.in);
-
         try {
-            GUIHelper.print(menu.getCurrentMenuText() + "> ");
-            int choice = Integer.parseInt(consoleInput.next());
+            String menuText = menu.getCurrentMenuText();
+            int choice = GUIHelper.askInteger(menuText);
             menu.run(choice);
-        } catch (NumberFormatException e) {
-            GUIHelper.print(GUIHelper.WRONG_INPUT);
         } catch (WrongMenuItemException e) {
-            GUIHelper.print(GUIHelper.WRONG_MENU_ITEM);
+            System.out.println(GUIHelper.WRONG_MENU_ITEM);
         }
-        GUIHelper.print("\n");
         askMenuItem();
     }
+
 }
